@@ -1,16 +1,14 @@
 ---
 layout: post
-title: Creating a Kubernetes Cluster with Raspberry Pi Devices  - Part 1: The Shopping List
+title: "Creating a Kubernetes Cluster with Raspberry Pi Devices  - Part 1: The Shopping List"
 categories: [Raspberry Pi]
 ---
-
-# Creating a Kubernetes Cluster with Raspberry Pi Devices  - Part 1: The Shopping List
 
 Lately I've been playing around with Kubernetes (mainly on Azure) so I thought why not build a Kubernetes cluster out of Raspberry Pi devices (apparently all the cool kids are doing it). Admittedly, I do have another reason which is to extend Azure, via Azure Arc, to my Raspberry Pi Kubernetes Cluster, but that will be a different blog series.
 
 Before I could build the cluster, I needed to spend some cash as I didn't have a Raspberry Pi or any accessories. After doing some research I thought I'd start small and if need be add to the list down the track.
 
-## The Shopping List (initial)
+# The Shopping List (initial)
 
 1 x Raspberry Pi 4 Model B. I went with the 8GB model in the end, you can never have enough RAM in my experience. I thought I start with one device before forking out cash on another to make this a true cluster.
 
