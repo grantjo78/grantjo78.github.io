@@ -14,3 +14,5 @@ I decided to start this  blog for a number of reason:
 4. And to have a bit of fun
 
 I'm not going to say that what I publish is the best way to do something but I will always look to improve and correct anything that I post.
+
+Now for the [disclaimer](/Disclaimer.md).
