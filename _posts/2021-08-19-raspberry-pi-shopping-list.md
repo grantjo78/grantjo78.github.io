@@ -24,7 +24,7 @@ Before I could build the cluster, I needed to spend some cash as I didn't have a
 
 1 x [UGREEN Micro HDMI Adapter Micro HDMI to HDMI Female Cable 4K Compatible for Raspberry Pi 4](https://www.amazon.com.au/gp/product/B00B2HORKE/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1). The Raspberry Pi 4 has [2 x Micro HDMI Ports](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/) which is pretty cool. I just don't have a Micro HDMI Adapter, hence the purchase.
 
-![](_posts/images/2021-08-19-raspberry-pi-shopping-list/UGreenMicroHDMI.jpg)
+![](/documentation/assets/images/UGreenMicroHDMI.jpg)
 
 1 x [GeeekPi Raspberry Pi Cluster Case Raspberry Pi Case with Cooling Fan and Raspberry Pi Heatsink for Raspberry Pi 3 Model B+ Raspberry Pi 3/2 Model B](https://www.amazon.com.au/gp/product/B07MW3GM1T/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1). As I build out my cluster of Raspberry Pi devices, this case looked like a great way to keep things nice and tidy.
 
