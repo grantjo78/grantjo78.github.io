@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About This Blog
+title: About
 order: 2
 ---
 
