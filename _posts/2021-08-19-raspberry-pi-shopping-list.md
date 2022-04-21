@@ -32,6 +32,6 @@ Before I could build the cluster, I needed to spend some cash as I didn't have a
 
 1 x [Satechi 108W PRO USB-C PD DESKTOP CHARGER](https://satechi.net/products/108w-pro-usb-c-pd-desktop-charger?variant=32118454386776). I didn't want to purchase [individual power supplies](https://www.raspberrypi.com/products/type-c-power-supply/) for my devices and thought I could consolidate them onto this desktop hub. Hopefully it has enough juice.
 
-![](_posts/images/2021-08-19-raspberry-pi-shopping-list/Satechi.jpg)
+![](/documentation/assets/images/2021-08-19-raspberry-pi-shopping-list/Satechi.jpg)
 
 Once you have your equipment we can move onto Setting up the Raspberry Pi.
