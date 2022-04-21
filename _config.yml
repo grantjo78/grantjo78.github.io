@@ -12,4 +12,4 @@ github_username:  grantjo78 # DO NOT include the @ character, or else the build 
 show_excerpts: true # set to false to remove excerpts on the homepage
 
 
-theme: jekyll-theme-architect
+theme: jekyll-theme-minimal
