@@ -51,13 +51,12 @@ Once you have saved the changes reboot the device using the below command.
 ```
 sudo reboot
 ```
+![Reboot host](/docs/assets/images/2021-08-26-raspberry-pi-setup/RebootHost.jpg)
 
 After the device has rebooted, SSH back in and run the hostnamectl command. You will have noticed that the hostname has changed.
 
-![Reboot host](/docs/assets/images/2021-08-26-raspberry-pi-setup/RebootHost.jpg)
-
-Now that we have our OS configured, we can move onto Installing Kubernetes onto the Master Node.
-
 ![Confirm host name](/docs/assets/images/2021-08-26-raspberry-pi-setup/ConfirmHostName.jpg)
+
+Now that we have our OS configured, we can move onto [Installing Kubernetes onto the Master Node](/_posts/2021-08-27-raspberry-pi-k8s-setup.md).
 
 If you have more than one Raspberry Pi, you can prepare the other devices using the previous steps.
