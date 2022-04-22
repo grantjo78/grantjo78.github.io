@@ -8,6 +8,8 @@ Once my hardware arrived, the first thing I needed to do was to install an opera
 
 I decided to go with the Ubuntu Server 21.04 for my Kubernetes cluster, the latest and greatest available at the time.
 
+![Raspberry Pi Image Builder - OS Selection](/docs/assets/images/2021-08-26-raspberry-pi-setup/OSSelection.jpg)
+
 Ubuntu have done a great job on documenting how to install [Ubuntu for a Raspberry device](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#2-prepare-the-sd-card), so I won't document what I did as I followed the instructions pretty much line by line.
 
 The one thing I did want to call out is that I've chosen to configure my cluster to use my [Wi-Fi](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) network rather than ethernet, mainly because I don't have an ethernet switch available to plug my devices into. 
@@ -18,6 +20,8 @@ Now you're probably thinking, how can I SSH to the device when I didn't set any 
 
 When you login for the first time you will be asked to change your password. Once you have done that, you will have access to the Raspberry Pi.
 
+![Ubuntu login](/docs/assets/images/2021-08-26-raspberry-pi-setup/UbuntuLogin.jpg)
+
 Before we move onto installing Kubernetes onto my master node, I'm going to change my hostname and update the host file so that name resolution will work.
 
 Run the below command to show the devices current hostname.
@@ -25,6 +29,7 @@ Run the below command to show the devices current hostname.
 ```
 hostnamectl
 ```
+![Obtaining hostname](/docs/assets/images/2021-08-26-raspberry-pi-setup/ObtainHostName.jpg)
 
 To permanently change the hostname run the below command.
 
@@ -32,11 +37,14 @@ To permanently change the hostname run the below command.
 sudo hostnamectl set-hostname newNameHere
 ```
 
+![Change hostname](/docs/assets/images/2021-08-26-raspberry-pi-setup/ChangeHostName.jpg)
+
 Next I updated the /etc/hosts file to replace any reference to the old hostname and add the new hostnames FQDN with corresponding IP address.  
 
 ```
 sudo nano /etc/hosts
 ```
+![Updating host file](/docs/assets/images/2021-08-26-raspberry-pi-setup/UpdateHostFile.jpg)
 
 Once you have saved the changes reboot the device using the below command.
 
@@ -46,6 +54,10 @@ sudo reboot
 
 After the device has rebooted, SSH back in and run the hostnamectl command. You will have noticed that the hostname has changed.
 
+![Reboot host](/docs/assets/images/2021-08-26-raspberry-pi-setup/RebootHost.jpg)
+
 Now that we have our OS configured, we can move onto Installing Kubernetes onto the Master Node.
+
+![Confirm host name](/docs/assets/images/2021-08-26-raspberry-pi-setup/ConfirmHostName.jpg)
 
 If you have more than one Raspberry Pi, you can prepare the other devices using the previous steps.

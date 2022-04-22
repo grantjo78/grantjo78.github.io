@@ -34,4 +34,4 @@ Before I could build the cluster, I needed to spend some cash as I didn't have a
 
 ![](/docs/assets/images/2021-08-19-raspberry-pi-shopping-list/Satechi.jpg)
 
-Once you have your equipment we can move onto Setting up the Raspberry Pi.
+Once you have your equipment we can move onto [Setting up the Raspberry Pi](/_posts/2021-08-26-raspberry-pi-setup.md).
