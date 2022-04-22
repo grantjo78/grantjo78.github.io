@@ -43,5 +43,4 @@ sudo kubectl get pods --all-namespaces
 
 ![](/docs/assets/images/2021-08-26-raspberry-pi-k8s-setup/PodRunning.jpg)
 
-
 As you can see, we now have Kubernetes up and running. Next we will look to join a worker node to our cluster.
