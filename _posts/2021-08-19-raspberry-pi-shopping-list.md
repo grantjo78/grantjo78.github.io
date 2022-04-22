@@ -12,7 +12,7 @@ Before I could build the cluster, I needed to spend some cash as I didn't have a
 
 1 x [Raspberry Pi 4 Model B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/). I went with the 8GB model in the end, you can never have enough RAM in my experience. I thought I start with one device before forking out cash on another to make this a true cluster.
 
-![](/documentation/assets/images/2021-08-19-raspberry-pi-shopping-list/raspberry-pi-4.png)
+![](/docs/assets/images/2021-08-19-raspberry-pi-shopping-list/raspberry-pi-4.png)
 
 1 x [Raspberry Pi Keyboard and Hub](https://www.raspberrypi.com/products/raspberry-pi-keyboard-and-hub/). Full disclosure here, I don't have a USB keyboard or mouse and I'm pretty sure my Bluetooth Apple Magic Keyboard and Logitech MX Master 2s would not work out of the box. Plus, the Raspberry Red and White keyboard does look pretty cool.
 
