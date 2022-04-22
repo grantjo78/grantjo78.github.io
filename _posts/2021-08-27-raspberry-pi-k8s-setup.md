@@ -14,7 +14,7 @@ To install K3s, SSH to the Raspberry Pi device that will be the master node in t
 curl -sfL https://get.k3s.io | sh -
 ```
 
-![](/docs/assets/images/2021-08-26-raspberry-pi-k8s-setup/Install-k3s.jpg)
+![](/docs/assets/images/2021-08-27-raspberry-pi-k8s-setup/Install-k3s.jpg)
 
 Now that K3s has been installed, lets install kubectl onto the master node so that we can see what's happening. To install kubectl enter the below commands.
 
@@ -33,7 +33,7 @@ Once kubectl has been installed, execute the below command to get information on
 sudo kubectl get nodes -o wide
 ```
 
-![](/docs/assets/images/2021-08-26-raspberry-pi-k8s-setup/MasterNodeStatus.jpg)
+![](/docs/assets/images/2021-08-27-raspberry-pi-k8s-setup/MasterNodeStatus.jpg)
 
 Execute the below command to list all the pods running on the cluster.
 
@@ -41,6 +41,6 @@ Execute the below command to list all the pods running on the cluster.
 sudo kubectl get pods --all-namespaces
 ```
 
-![](/docs/assets/images/2021-08-26-raspberry-pi-k8s-setup/PodRunning.jpg)
+![](/docs/assets/images/2021-08-27-raspberry-pi-k8s-setup/PodRunning.jpg)
 
 As you can see, we now have Kubernetes up and running. Next we will look to join a worker node to our cluster.
