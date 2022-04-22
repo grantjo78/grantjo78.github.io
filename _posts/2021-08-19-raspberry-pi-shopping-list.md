@@ -26,6 +26,7 @@ Before I could build the cluster, I needed to spend some cash as I didn't have a
 
 ![](/documentation/assets/images/2021-08-19-raspberry-pi-shopping-list/UGreenMicroHDMI.jpg)
 <img src="/documentation/assets/images/2021-08-19-raspberry-pi-shopping-list/UGreenMicroHDMI.jpg" width=50% height=50%>
+<img src="/documentation/assets/images/2021-08-19-raspberry-pi-shopping-list/UGreenMicroHDMI.jpg" width=75% height=75%>
 
 1 x [GeeekPi Raspberry Pi Cluster Case Raspberry Pi Case with Cooling Fan and Raspberry Pi Heatsink for Raspberry Pi 3 Model B+ Raspberry Pi 3/2 Model B](https://www.amazon.com.au/gp/product/B07MW3GM1T/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1). As I build out my cluster of Raspberry Pi devices, this case looked like a great way to keep things nice and tidy.
 
