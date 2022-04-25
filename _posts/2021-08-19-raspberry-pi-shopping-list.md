@@ -4,13 +4,13 @@ title: "Creating a Kubernetes Cluster with Raspberry Pi Devices  - Part 1: The S
 categories: [Raspberry Pi]
 ---
 
-Lately I've been playing around with Kubernetes (mainly on Azure) so I thought why not build a Kubernetes cluster out of Raspberry Pi devices (apparently all the cool kids are doing it). Admittedly, I do have another reason which is to extend Azure, via [Azure Arc](https://docs.microsoft.com/en-us/azure/azure-arc/kubernetes/overview#:~:text=Azure%20Arc%20enabled%20Kubernetes%20supports%20these%20scenarios%3A%201,Apply%20policies%20by%20using%20Azure%20Policy%20for%20Kubernetes.), to my Raspberry Pi Kubernetes Cluster, but that will be a different blog series.
+Lately I've been playing around with Kubernetes (mainly on Azure) but I have to admit, there is just something about having something physical with flashing lights to look at. So I thought, why not build a Kubernetes cluster out of Raspberry Pi devices (apparently all the cool kids are doing it). I did have another reason, which was to  extend Azure, via [Azure Arc](https://docs.microsoft.com/en-us/azure/azure-arc/kubernetes/overview#:~:text=Azure%20Arc%20enabled%20Kubernetes%20supports%20these%20scenarios%3A%201,Apply%20policies%20by%20using%20Azure%20Policy%20for%20Kubernetes.), to the Raspberry Pi Kubernetes Cluster, but that will be a different series of articles.
 
-Before I could build the cluster, I needed to spend some cash as I didn't have a Raspberry Pi or any accessories. After doing some research I thought I'd start small and if need be add to the list down the track.
+Before I could build the cluster I needed to spend some cash as I don't have any Raspberry Pi devices or  accessories. After doing some research I thought I'd start small and if need be add to the list down the track.
 
-# The Shopping List (initial)
+# The Initial Shopping List
 
-1 x [Raspberry Pi 4 Model B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/). I went with the 8GB model in the end, you can never have enough RAM in my experience. I thought I start with one device before forking out cash on another to make this a true cluster.
+2 x [Raspberry Pi 4 Model B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/). I went with the 8GB model in the end, you can never have enough RAM in my experience. 
 
 ![](/docs/assets/images/2021-08-19-raspberry-pi-shopping-list/raspberry-pi-4.png)
 
@@ -18,7 +18,7 @@ Before I could build the cluster, I needed to spend some cash as I didn't have a
 
 ![](/docs/assets/images/2021-08-19-raspberry-pi-shopping-list/Keyboard.jpeg)
 
-1 x [SanDisk Extreme 32GB MicroSD Card](https://www.amazon.com.au/Sandisk-SDSQXA1-256G-GN6MA-Extreme-microSD-Adapter/dp/B06XWMQ81P/ref=sr_1_1_sspa?dchild=1&keywords=SanDisk%2BExtreme%2B32GB%2BMicroSD%2BCard&qid=1629278289&s=computers&sr=1-1-spons&smid=A1E8JZNQ4REMVH&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzN1FVOEozSlMyV0kxJmVuY3J5cHRlZElkPUEwOTI0MjM2MkFYQVJMUEVXWURMViZlbmNyeXB0ZWRBZElkPUFDMjIxMTM1UjYxS1Umd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl&th=1). Just in case you weren't aware, the Raspberry Pi doesn't come with any persistent storage, so where do you install the operating system you ask. The Raspberry Pi does come with a MicroSD card slot. You can use a MicroSD card to provide the persistent storage for the operating system. There is  [guidance](https://www.raspberrypi.com/documentation/computers/getting-started.html#sd-cards) on the Raspberry Pi site  for selecting a MicroSD Card if you're interested. 
+1 x [SanDisk Extreme 32GB MicroSD Card](https://www.amazon.com.au/Sandisk-SDSQXA1-256G-GN6MA-Extreme-microSD-Adapter/dp/B06XWMQ81P/ref=sr_1_1_sspa?dchild=1&keywords=SanDisk%2BExtreme%2B32GB%2BMicroSD%2BCard&qid=1629278289&s=computers&sr=1-1-spons&smid=A1E8JZNQ4REMVH&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzN1FVOEozSlMyV0kxJmVuY3J5cHRlZElkPUEwOTI0MjM2MkFYQVJMUEVXWURMViZlbmNyeXB0ZWRBZElkPUFDMjIxMTM1UjYxS1Umd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl&th=1). Just in case you weren't aware, the Raspberry Pi doesn't come with any persistent storage, so where do you install the operating system you ask? The Raspberry Pi does come with a MicroSD card slot and you can use a MicroSD card to provide the persistent storage for the operating system. There is [guidance](https://www.raspberrypi.com/documentation/computers/getting-started.html#sd-cards) on the Raspberry Pi site  for selecting a MicroSD Card if you're interested. 
 
 ![](/docs/assets/images/2021-08-19-raspberry-pi-shopping-list/SanDisk.jpg)
 
@@ -34,4 +34,4 @@ Before I could build the cluster, I needed to spend some cash as I didn't have a
 
 ![](/docs/assets/images/2021-08-19-raspberry-pi-shopping-list/Satechi.jpg)
 
-Once you have your equipment we can move onto [Setting up the Raspberry Pi](/_posts/2021-08-26-raspberry-pi-setup.md).
+Once my new toys arrived I was able to move onto the next step, [Setting up the Raspberry Pi](/_posts/2021-08-26-raspberry-pi-setup.md).
