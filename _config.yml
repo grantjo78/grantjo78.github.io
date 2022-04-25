@@ -7,9 +7,14 @@ email: mail@johangrant.cloud
 #  Google search results) and in your feed.xml site description.
 # social links
 # twitter_username: your-twitter-handle # DO NOT include the @ character, or else the build will fail!
+linkedin: https://www.linkedin.com/in/johangrant/
 github_username:  grantjo78 # DO NOT include the @ character, or else the build will fail!
 
 show_excerpts: true # set to false to remove excerpts on the homepage
 
 
 theme: minima
+
+gems:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
