@@ -37,7 +37,7 @@ As you can see, we now have Kubernetes up and running. Next we will look to join
 
 # Troubleshooting Section
 
-_kubectl: The connection to the server 127.0.0.1:6443 was refused - did you specify the right host or port?_
+**_kubectl: The connection to the server 127.0.0.1:6443 was refused - did you specify the right host or port?_**
 
 If you look at the syslog file (/var/logs/syslog) you will see the following error message:
 
