@@ -14,7 +14,7 @@ Ubuntu have done a great job on documenting how to install [Ubuntu for a Raspber
 
 The one thing I did want to call out is that I've chosen to configure my cluster to use my [Wi-Fi](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet) network rather than ethernet, mainly because I don't have an ethernet switch available to plug my devices into. 
 
-After installing the operating system onto my MicroSD card and inserting into my Raspberry Pi, I connected the USB-C power connector and booted the device (at this point I have not insert the USB keyboard or the Micro HDMI adapter). I went onto my home Wi-Fi network to see if the device had successfully picked up an IP address on my Wi-Fi network. Sure enough it had, so I simply SSH to the device (turns out I didn't need the USB keyboard and Micro HDMI adapter after all!).
+After installing the operating system onto the MicroSD card and inserting into my Raspberry Pi, I connected the USB-C power connector and booted the device (at this point I have not insert the USB keyboard or the Micro HDMI adapter). I went onto my home Wi-Fi network to see if the device had successfully picked up an IP address on my Wi-Fi network. Sure enough it had, so I simply SSH to the device (turns out I didn't need the USB keyboard and Micro HDMI adapter after all!).
 
 Now you're probably thinking, how can I SSH to the device when I didn't set any credentials. This is covered in the [Ubuntu setup documentation](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#4-boot-ubuntu-server). The default login ID is "ubuntu" and the password is also "ubuntu".
 
