@@ -4,7 +4,7 @@ title: "Creating a Kubernetes Cluster with Raspberry Pi Devices - Part 2: Settin
 categories: [Raspberry Pi]
 ---
 
-Once my hardware arrived, the first thing I needed to do was to install an operating system onto the MicroSD card. Raspberry have provided the Raspberry Pi Imager tool to assist with this process. They've even provided a short video to walk you through the process of how to install an operating system.
+Once my hardware arrived, the first thing I needed to do was to install an operating system onto the MicroSD card. Raspberry have provided the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) tool to assist with this process. They've even provided a short video to walk you through the process of how to install an operating system.
 
 I decided to go with the Ubuntu Server 21.04 for my Kubernetes cluster, the latest and greatest available at the time.
 
