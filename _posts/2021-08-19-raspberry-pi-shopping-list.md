@@ -34,6 +34,4 @@ Before I could build the cluster I needed to spend some cash as I don't have any
 
 ![](/docs/assets/images/2021-08-19-raspberry-pi-shopping-list/Satechi.jpg)
 
-Once my new toys arrived I was able to move onto the next step, [Setting up the Raspberry Pi](/_posts/2021-08-26-raspberry-pi-setup.md) [Setting up the Raspberry Pi]{% post_url 2021-08-26-raspberry-pi-setup %} 
-
-[Setting up the Raspberry Pi]({% post_url 2021-08-26-raspberry-pi-setup %}).
+Once my new toys arrived I was able to move onto the next step, [Setting up the Raspberry Pi]({% post_url 2021-08-26-raspberry-pi-setup %}).
