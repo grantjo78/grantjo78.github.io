@@ -57,6 +57,6 @@ After the device has rebooted, SSH back in and run the hostnamectl command. You 
 
 ![Confirm host name](/docs/assets/images/2021-08-26-raspberry-pi-setup/ConfirmHostName.jpg)
 
-Now that we have our OS configured, we can move onto [Installing Kubernetes onto the Master Node](/_posts/2021-08-27-raspberry-pi-k8s-setup.md).
+Now that we have our OS configured, we can move onto [Installing Kubernetes onto the Master Node]({% post_url 2021-08-27-raspberry-pi-k8s-setup %}).
 
 If you have more than one Raspberry Pi, you can prepare the other devices using the previous steps.
