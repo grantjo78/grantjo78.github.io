@@ -7,10 +7,10 @@ email: mail@johangrant.cloud
 #  line in _config.yml. It will appear in your document head meta (for
 #  Google search results) and in your feed.xml site description.
 
-social links:
+social_links:
 # twitter_username: your-twitter-handle # DO NOT include the @ character, or else the build will fail!
-linkedin: johangrant
-github_username:  grantjo78 # DO NOT include the @ character, or else the build will fail!
+  linkedin: johangrant
+  github_username:  grantjo78 # DO NOT include the @ character, or else the build will fail!
 
 show_excerpts: true # set to false to remove excerpts on the homepage
 
