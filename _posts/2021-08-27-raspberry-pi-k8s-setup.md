@@ -6,7 +6,7 @@ categories: [Raspberry Pi, K3s]
 
 Now that I have my Raspberry Pi up and running, it's time to install Kubernetes. I've decided to go with [K3s](https://k3s.io/) as the Kubernetes distribution for my cluster. This is because K3s is lightweight and optimised for ARM, which makes it a great choice for my Raspberry Pi. 
 
-This is the first time I've installed K3s and I've just been following along with the K3s quick-start guide.
+This is the first time I've installed K3s and I've just been following along with the [K3s quick-start guide](https://rancher.com/docs/k3s/latest/en/quick-start/).
 
 To install K3s, SSH to the Raspberry Pi device that will be the master node and execute the below command.
 
