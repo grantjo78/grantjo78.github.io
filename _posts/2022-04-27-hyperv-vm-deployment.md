@@ -8,7 +8,7 @@ This week I had a requirement to enable Hyper-V within a virtual machine in Azur
 1. Selecting a Virtual Machine Series that Support Nested Virtualisation
 2. Creation of a Virtual Machine 
 
-<details>##<summary>Selecting a Virtual Machine Series that Support Nested Virtualisation**</summary> 
+<details>## <summary>Selecting a Virtual Machine Series that Support Nested Virtualisation</summary> 
 <p>
 Before enabling Hyper-V on a virtual machine, you need to ensure that it supports **nested virtualisation** (not all virtual machine series support nested virtualisation).
 
