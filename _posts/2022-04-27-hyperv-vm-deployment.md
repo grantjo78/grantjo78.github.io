@@ -4,7 +4,11 @@ title: "Nested Virtualization on Azure - Part 1: Deploying the Virtual Machine"
 categories: [Hyper-V]
 ---
 
-This week I had a requirement to enable Hyper-V within a virtual machine in Azure. I've done this many times before but I've never documented the process and I always seem to forget a step.
+This week I had a requirement to enable Hyper-V within a virtual machine in Azure. I've done this many times before but I've never documented the process and I always seem to forget a step. To start off with, we are going to look at the following:
+1. Selecting a Virtual Machine Series that Support Nested Virtualisation
+2. Creation of a Virtual Machine 
+
+## Selecting a Virtual Machine Series that Support Nested Virtualisation
 
 Before enabling Hyper-V on a virtual machine, you need to ensure that it supports **nested virtualisation** (not all virtual machine series support nested virtualisation).
 
@@ -19,11 +23,11 @@ Below is an example of the [Dv5-series VM's](https://docs.microsoft.com/en-us/az
 ![Nested Virtualisation Not Supported](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-SKU-NestedV-Supported.jpg)
 
 
-# Virtual Machine Deployment
+## Creation of a Virtual Machine
 
 I'll quickly running through the deployment of a virtual machine and highlight areas that you will need to consider.
 
-## Basics
+### Basics
 
 Within the **Basic** blade of the deployment the following areas require consideration:
 
@@ -36,7 +40,7 @@ Once you have complete populating the fields, click on **Next: Disks >** to cont
 
 ![](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-Create-Basics.jpg)
 
-## Disk
+### Disk
 
 Within the **Disk** blade I've added an additional disk where I will be storing the Hyper-V guest disks.
 
@@ -52,7 +56,7 @@ Once you have complete populating the fields, click on **Next: Management >** to
 
 ![](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-Create-Networking.jpg)
 
-## Management
+### Management
 
 Within the **Management** blade I haven't identified anything that would impact the enabling of Hyper-V within the guest.
 
@@ -60,7 +64,7 @@ Once you have complete populating the fields, click on **Next: Advanced >** to c
 
 ![](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-Create-Management.jpg)
 
-## Advanced
+### Advanced
 
 Within the **Advanced** blade I haven't identified anything that would impact the enabling of Hyper-V within the guest.
 
@@ -68,7 +72,7 @@ Once you have complete populating the fields, click on **Next: Review + create >
 
 ![](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-Create-Advanced.jpg)
 
-## Tags
+### Tags
 
 Within the **Tags** blade I haven't identified anything that would impact the enabling of Hyper-V within the guest.
 
@@ -76,13 +80,13 @@ Once you have complete populating the fields, click on **Next: Disks >** to cont
 
 ![](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-Create-Tags.jpg)
 
-## Review + Create
+### Review + Create
 
 Click on **Create** to begin the virtual machine deployment.
 
 ![](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-Create-Review.jpg)
 
-## Resources
+### Resources
 
 Now that the VM deployment has completed, click on **Go to resource** to go to your newly created virtual machine.
 
