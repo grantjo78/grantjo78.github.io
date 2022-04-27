@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Nested Virtualization on Azure - Part 1: Deploying the Virtual Machine"
+title: "Nested Virtualization on Azure - Part 1: Virtual Machine Requirements"
 categories: [Hyper-V]
 ---
 
