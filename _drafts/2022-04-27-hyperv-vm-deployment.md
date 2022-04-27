@@ -8,13 +8,13 @@ This week I had a requirement to enable Hyper-V within a virtual machine in Azur
 
 Before enabling Hyper-V on a virtual machine you to ensure that it supports **nested virtualisation** (not all virtual machine series support nested virtualisation).
 
-To determine if the virtual machine series supports nested virtualisation, you can go to the [Azure Virtual Machine documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-general) and look at the capability section for the series. Look for the **Nested Virtualiztion** capability** and confirm that it says **Supported**
+To determine if the virtual machine series supports nested virtualisation, you can go to the [Azure Virtual Machine documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-general) and look at the capability section for the series. Look for the **Nested Virtualiztion** capability and confirm that it says **Supported**
 
-Below is an example of the B-series VM's which **does not** support nested virtualisation
+Below is an example of the [B-series VM's[(https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-b-series-burstable)] which **does not** support nested virtualisation
 
 ![Nested Virtualisation Not Supported](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-SKU-NestedV-NotSupported.jpg)
 
-Below is an example of the Dv5-series VM's which **does** support nested virtualisation.
+Below is an example of the [Dv5-series VM's](https://docs.microsoft.com/en-us/azure/virtual-machines/dv5-dsv5-series) which **does** support nested virtualisation.
 
 ![Nested Virtualisation Not Supported](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-SKU-NestedV-Supported.jpg)
 
@@ -25,7 +25,7 @@ I'll quickly running through the deployment of a virtual machine and highlight a
 
 ## Basics
 
-Within the *Basic* blade of the deployment the following areas require consideration:
+Within the **Basic** blade of the deployment the following areas require consideration:
 
 **Image**
 
