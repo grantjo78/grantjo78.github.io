@@ -4,7 +4,9 @@ title: "Nested Virtualization on Azure - Part 1: Virtual Machine Requirements"
 categories: [Hyper-V]
 ---
 
-This week I had a requirement to enable Hyper-V within a virtual machine in Azure. I've done this many times before but I've never documented the process and I always seem to forget a step. To start off with, we are going to look at the following:
+This week I had a requirement to enable Hyper-V within a virtual machine on Azure. I've done this many times before but I've never documented the process and I always seem to forget a step. 
+
+To start off with, I'm going to look at the following:
 1. Nested Virtualisation Support
 2. Creation of a Virtual Machine 
 
