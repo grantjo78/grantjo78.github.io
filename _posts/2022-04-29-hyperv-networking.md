@@ -4,7 +4,7 @@ title: "Nested Virtualization on Azure - Part 3: Networking"
 categories: [Hyper-V]
 ---
 
-Since my last post in this series, I've deploy a virtual machine (VM1) onto the Hyper-V host.
+Since my last post in this series, I've deployed a virtual machine (VM1) onto the Hyper-V host.
 
 VM1's has been allocated to the virtual switch that was created during the enabling of the Hyper-V role (Microsoft Hyper-V Network Adapter - Virtual Switch).
 
@@ -14,11 +14,15 @@ VM1's has been allocated to the virtual switch that was created during the enabl
 
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-vSwitch-Original.jpg)
 
-If we look at the guest's IP configuration, you can see that it does not have a valid IP address or default gateway.
+Looking at the guest's IP configuration, you can see that it does not have a valid IP address or default gateway.
 
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-Guest-IP.jpg)
 
-In order to allow the guest virtual machine to route traffic externally, a **NAT Virtual Network** needs to be created.
+If I try to access a website on the internet (e.g. www.microsoft.com), I'm unable to access the site.
+
+![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-NoInternetAccess.jpg)
+
+In order to allow the guest to route traffic externally, a **NAT Virtual Network** needs to be created.
 
 
 ## How to create a NAT Virtual Network
@@ -106,12 +110,27 @@ New-NetNat -Name AzureNAT -InternalIPInterfaceAddressPrefix 192.168.0.0/24
 
 ## Guest VM Changes
 
+Now that we have a NAT gateway bound to a virtual switch, we need to configure the guest virtual machine to use it.
+
 ### Virtual Switch
 
+If you go to the virtual machines Hyper-V settings and click on **Network Adapters**, you can see that the guest is attached to the original virtual switch.
+
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-vSwitch-Original.jpg)
+
+Click on the pull down and select the new virtual switch (e.g. Azure)
 
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-vSwitch-Azure.jpg)
 
 ### Guest Machine IP Address
 
+The NAT network does not dynamically assign IP addresses to guest virtual machines. Configure the guest networking interface with the following:
+- Static IP address. This should be within the address range of the NAT network specified above (e.g. 192.168.0.10)- Subnet mask: This should match the subnet mask specified above (e.g. 255.255.255.0)
+- Default gateway: This should match the NAT Gateway IP address (e.g. 192.168.0.1)
+- DNS Sever: IP address of a DNS server that is able to perform name resolution (e.g. 8.8.8.8) 
+
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-IP.jpg)
+
+Once the above configurations have been made, the guest should be able to access the internet.
+
+![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-InternetAccess.jpg)
