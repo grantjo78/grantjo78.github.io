@@ -8,13 +8,13 @@ Now that we have a virtual machine deployed that supports nested virtualisation,
 
 ## Enabling Hyper-V role
 
-### Step 1: Server Manager 
+### *Step 1: Server Manager*
 
 From the **Server Manager** select the **Add roles and features option**.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-Add.jpg)
 
-### Step 2: Before you begin
+### *Step 2: Before you begin*
 
 Click **Next** to continue.
 
@@ -56,27 +56,25 @@ No additional features are required. Click **Next** to continue.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-Features-Next.jpg)
 
-### Configure Hyper-V
-
-#### Step 9: Hyper-V
+### Step 9: Hyper-V
 
 Click **Next** to continue.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-Config.jpg)
 
-#### Step 10: Virtual Switch
+### Step 10: Virtual Switch
 
 Select the **Microsoft Hyper-V Adapter** and click **Next** to continue.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-Config-VirtualSwitch.jpg)
 
-#### Step 11: Migration
+### Step 11: Migration
 
 Because I am sending up a standalone Hyper-V instance, no migration configuration is required. Click **Next** to continue.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-Config-Migration.jpg)
 
-#### Step 12: Default Stores
+### Step 12: Default Stores
 
 The **Default Stores** configuration set's the default location where your Hyper-V guest VM configuration and virtual hard disks files will be stored. I have added an additional disk to the virtual machine for the storage of these files (E drive). Update the paths for the virtual hard disk and configuration files to reflect your configuration.
 
@@ -96,13 +94,13 @@ Once the installation of the role has been completed, reboot the virtual machine
 
 ## Hyper-V Manager
 
-## Step 15: Hyper-V Administration Tool
+### Step 15: Hyper-V Administration Tool
 
 Once the server has restarted, from the **Server Manager**, select **Tools**, **Hyper-V Manager**.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Manager-Host.jpg)
 
-## Step 16: Hyper-V Host
+### Step 16: Hyper-V Host
 
 Click on the Hyper-V Host to get an overview of the current configuration.
 
