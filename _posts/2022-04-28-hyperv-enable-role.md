@@ -106,4 +106,4 @@ Once the server has restarted, from the **Server Manager**, select **Tools**, **
 
 Click on the Hyper-V Host to get an overview of the current configuration.
 
-![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Manager-Host-Overview.jpg
+![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Manager-Host-Overview.jpg)
