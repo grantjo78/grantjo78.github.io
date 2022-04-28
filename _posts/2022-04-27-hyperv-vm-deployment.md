@@ -27,7 +27,7 @@ Below is an example of the [general purpose Dv5-series](https://docs.microsoft.c
 
 I'll quickly running through the deployment of a virtual machine and highlight areas that you will need to consider.
 
-### Basics
+### Step 1: Basics
 
 Within the **Basics** blade of the deployment the following areas require consideration:
 
@@ -40,7 +40,7 @@ Within the **Basics** blade of the deployment the following areas require consid
 
 Once you have complete populating the fields, click on **Next: Disks >** to continue.
 
-### Disks
+### Step 2: Disks
 
 Within the **Disks** blade I've added an additional disk where I will be storing the Hyper-V guest disks.
 
@@ -48,7 +48,7 @@ Within the **Disks** blade I've added an additional disk where I will be storing
 
 Once you have complete populating the fields, click on **Next: Networking >** to continue.
 
-## Networking
+## Step 3: Networking
 
 Within the **Networking** blade I haven't identified anything that would impact the enabling of Hyper-V within the guest.
 
@@ -56,7 +56,7 @@ Within the **Networking** blade I haven't identified anything that would impact 
 
 Once you have complete populating the fields, click on **Next: Management >** to continue.
 
-### Management
+### Step 4: Management
 
 Within the **Management** blade I haven't identified anything that would impact the enabling of Hyper-V within the guest.
 
@@ -64,7 +64,7 @@ Within the **Management** blade I haven't identified anything that would impact 
 
 Once you have complete populating the fields, click on **Next: Advanced >** to continue.
 
-### Advanced
+### Step 5: Advanced
 
 Within the **Advanced** blade I haven't identified anything that would impact the enabling of Hyper-V within the guest.
 
@@ -72,7 +72,7 @@ Within the **Advanced** blade I haven't identified anything that would impact th
 
 Once you have complete populating the fields, click on **Next: Review + create >** to continue.
 
-### Tags
+### Step 6: Tags
 
 Within the **Tags** blade I haven't identified anything that would impact the enabling of Hyper-V within the guest.
 
@@ -80,13 +80,13 @@ Within the **Tags** blade I haven't identified anything that would impact the en
 
 Once you have complete populating the fields, click on **Next: Disks >** to continue.
 
-### Review + Create
+### Step 7: Review + Create
 
 Click on **Create** to begin the virtual machine deployment.
 
 ![](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-Create-Review.jpg)
 
-### Resources
+### Step 8: Resources
 
 Now that the VM deployment has completed, click on **Go to resource** to go to your newly created virtual machine.
 
