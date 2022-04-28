@@ -38,11 +38,15 @@ To create the NAT Virtual Switch, follow the below commands:
 
 ### Step 1: Create a new Internal Virtual Switch
 
-Run the below command to create a new Internal virtual switch.
+Create a new **Internal** virtual switch by running the below command. 
 
 ```
-New-VMSwitch -SwitchName "SwitchName" -SwitchType Internal
+New-VMSwitch -SwitchName <SwitchName> -SwitchType Internal
+```
 
+- SwitchName: Name to give the virtual switch.
+
+```
 Example:
 
 New-VMSwitch -SwitchName "Azure" -SwitchType Internal
@@ -50,8 +54,9 @@ New-VMSwitch -SwitchName "Azure" -SwitchType Internal
 
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-AzureSwitch.jpg)
 
-### Step 2: Identity New Switches ifIndex Number
+### Step 2: Identity New Virtual Switches Interface Index
 
+Identify the newly created virtual switches interface index number.
 
 ```
 Get-NetAdapter
@@ -59,18 +64,39 @@ Get-NetAdapter
 
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-ifIndex.jpg)
 
+
+### Step 3: Configure NAT Gateway IP Address
+
+Assign an IP address to the NAT Gateway by running the below command. 
+
 ```
 New-NetIPAddress -IPAddress <NAT Gateway IP> -PrefixLength <NAT Subnet Prefix Length> -InterfaceIndex <ifIndex>
 
+```
+
+- IPAddress: Specifies the IPv4 or IPv6 address to use as the NAT gateway IP (e.g. 192.168.0.1)
+- PrefixLength: Defines the NAT local subnet size (subnet mask) (e.g. 255.255.255.0)
+- InterfaceIndex: Interface index of the virtual switch (e.g. 18)
+
+```
 Example:
 
 New-NetIPAddress -IPAddress 192.168.0.1 -PrefixLength 24 -InterfaceIndex 18
 ```
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-NATIP.jpg)
 
+### Step 4: Configure NAT Network
+
+Configure the NAT network by running the below command.
+
 ```
 New-NetNat -Name <NATOutsideName> -InternalIPInterfaceAddressPrefix <NAT subnet prefix>
+```
 
+- Name: Describes the name of the NAT network (e.g. AzureNAT)
+- InternalIPInterfaceAddressPrefix: NAT Subnet Prefix Length (e.g. 192.168.0.0/24)
+
+```
 Example:
 
 New-NetNat -Name AzureNAT -InternalIPInterfaceAddressPrefix 192.168.0.0/24
