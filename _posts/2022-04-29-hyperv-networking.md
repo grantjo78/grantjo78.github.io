@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Nested Virtualization on Azure - Part 3: Networking"
+title: "Nested Virtualization on Azure - Part 3: Networking - NAT"
 categories: [Hyper-V]
 ---
 
@@ -112,7 +112,7 @@ New-NetNat -Name AzureNAT -InternalIPInterfaceAddressPrefix 192.168.0.0/24
 
 Now that we have a NAT gateway bound to a virtual switch, we need to configure the guest virtual machine to use it.
 
-### Virtual Switch
+### Step 5: Virtual Switch
 
 If you go to the virtual machines Hyper-V settings and click on **Network Adapters**, you can see that the guest is attached to the original virtual switch.
 
@@ -122,7 +122,7 @@ Click on the pull down and select the new virtual switch (e.g. Azure)
 
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-vSwitch-Azure.jpg)
 
-### Guest Machine IP Address
+### Step 6: Guest Machine IP Address
 
 The NAT network does not dynamically assign IP addresses to guest virtual machines. Configure the guest networking interface with the following:
 - Static IP address. This should be within the address range of the NAT network specified above (e.g. 192.168.0.10)- Subnet mask: This should match the subnet mask specified above (e.g. 255.255.255.0)
