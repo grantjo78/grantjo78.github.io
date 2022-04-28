@@ -36,9 +36,9 @@ Within the **Basics** blade of the deployment the following areas require consid
 - If your Hyper-V host is running an AMD EPYC/Ruzen processor or later, the Operating System for the host must be Windows Server 2022 or greater
 2. **Size**. As discussed previously, select a virtual machine series that supports nested virtualisation.
 
-Once you have complete populating the fields, click on **Next: Disks >** to continue.
-
 ![](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-Create-Basics.jpg)
+
+Once you have complete populating the fields, click on **Next: Disks >** to continue.
 
 ### Disks
 
