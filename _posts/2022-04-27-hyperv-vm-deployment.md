@@ -48,7 +48,7 @@ Within the **Disks** blade I've added an additional disk where I will be storing
 
 Once you have complete populating the fields, click on **Next: Networking >** to continue.
 
-## Step 3: Networking
+### Step 3: Networking
 
 Within the **Networking** blade I haven't identified anything that would impact the enabling of Hyper-V within the guest.
 
