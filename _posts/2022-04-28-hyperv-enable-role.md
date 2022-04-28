@@ -106,4 +106,4 @@ Click on the Hyper-V Host to get an overview of the current configuration.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Manager-Host-Overview.jpg)
 
-Now that I've enabled the Hyper-V role on the virtul machines, let's move onto [Networking]({% post_url 2022-04-29-hyperv-networking%}).
+Now that I've enabled the Hyper-V role on the virtul machines, let's move onto [Networking ]({% post_url 2022-04-29-hyperv-networking%}).
