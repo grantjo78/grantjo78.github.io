@@ -94,4 +94,4 @@ Now that the VM deployment has completed, click on **Go to resource** to go to y
 
 ![](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-Create-Completed.jpg)
 
-Now that I've deployed a virtual machine that supports nested virtualisation, let's move onto Enabling the Hyper-V Role.
+Now that I've deployed a virtual machine that supports nested virtualisation, let's move onto [Enabling the Hyper-V Role]({% post_url 2022-04-28-hyperv-enable-role%}).
