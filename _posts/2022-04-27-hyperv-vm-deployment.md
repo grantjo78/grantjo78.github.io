@@ -12,6 +12,7 @@ To start off with, I'm going to look at the following:
 
 ## Nested Virtualisation Support
 Before enabling Hyper-V on a virtual machine, you need to ensure that it supports **nested virtualisation** (not all virtual machine series support nested virtualisation). If you enable the Hyper-V role on a virtual machine that does not support nested virtualisation, you may see an error similar to the one below.
+
 ![](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-Enable-Role-Fail.jpg)
 
 
