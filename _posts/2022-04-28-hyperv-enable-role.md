@@ -8,87 +8,87 @@ Now that we have a virtual machine deployed that supports nested virtualisation,
 
 ## Enabling Hyper-V role
 
-### Server Manager 
+### Step 1: Server Manager 
 
 From the **Server Manager** select the **Add roles and features option**.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-Add.jpg)
 
-### Before you begin
+### Step 2: Before you begin
 
 Click **Next** to continue.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-BeforeBegin.jpg)
 
-### Installation type
+### Step 3: Installation type
 
 Select **Role-based or feature based installation** and then click **Next** to continue.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-InstallType.jpg)
 
-### Server Selection
+### Step 4: Server Selection
 
 Click **Next** to continue.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-ServerSelection.jpg)
 
-### Server Role
+### Step 5: Server Role
 
 Click on the **Hyper-V** role.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-SelectHyperVRole.jpg)
 
-### Add Features
+### Step 6: Add Features
 
 Click **Add Features** within the pop.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-AddFeatures.jpg)
 
-### Server Role
+### Step 7: Server Role
 
 No additional roles are required. Click **Next** to continue.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-AddFeatures-Next.jpg)
 
-### Features
+### Step 8: Features
 
 No additional features are required. Click **Next** to continue.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-Features-Next.jpg)
 
-### Configure Hyper-V
+### Step 9: Configure Hyper-V
 
-#### Hyper-V
+#### Step 10: Hyper-V
 
 Click **Next** to continue.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-Config.jpg)
 
-#### Virtual Switch
+#### Step 11: Virtual Switch
 
 Select the **Microsoft Hyper-V Adapter** and click **Next** to continue.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-Config-VirtualSwitch.jpg)
 
-#### Migration
+#### Step 12: Migration
 
 Because I am sending up a standalone Hyper-V instance, no migration configuration is required. Click **Next** to continue.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-Config-Migration.jpg)
 
-#### Default Stores
+#### Step 13: Default Stores
 
 The **Default Stores** configuration set's the default location where your Hyper-V guest VM configuration and virtual hard disks files will be stored. I have added an additional disk to the virtual machine for the storage of these files (E drive). Update the paths for the virtual hard disk and configuration files to reflect your configuration.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-Config-DefaultStores.jpg)
 
-### Confirmation
+### Step 14: Confirmation
 
 Click **Next** to continue.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-Confirmation.jpg)
 
-### Reboot
+### Step 15: Reboot
 
 Once the installation of the role has been completed, reboot the virtual machine.
 
@@ -96,13 +96,13 @@ Once the installation of the role has been completed, reboot the virtual machine
 
 ## Hyper-V Manager
 
-## Hyper-V Administration Tool
+## Step 16: Hyper-V Administration Tool
 
 Once the server has restarted, from the **Server Manager**, select **Tools**, **Hyper-V Manager**.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Manager-Host.jpg)
 
-## Hyper-V Host
+## Step 17: Hyper-V Host
 
 Click on the Hyper-V Host to get an overview of the current configuration.
 
