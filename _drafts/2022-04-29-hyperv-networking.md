@@ -40,7 +40,7 @@ To create the NAT Virtual Switch, follow the below commands:
 
 Run the below command to create a new Internal virtual switch.
 
-````
+```
 New-VMSwitch -SwitchName "SwitchName" -SwitchType Internal
 
 Example:
