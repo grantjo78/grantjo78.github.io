@@ -8,13 +8,13 @@ Now that we have a virtual machine deployed that supports nested virtualisation,
 
 ## Enabling Hyper-V role
 
-### *Step 1: Server Manager*
+### Step 1: Server Manager*
 
 From the **Server Manager** select the **Add roles and features option**.
 
 ![](/docs/assets/images/2022-04-28-hyperv-enable-role/HyperV-Role-Add.jpg)
 
-### *Step 2: Before you begin*
+### Step 2: Before you begin*
 
 Click **Next** to continue.
 
