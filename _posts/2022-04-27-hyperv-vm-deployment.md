@@ -11,7 +11,9 @@ To start off with, I'm going to look at the following:
 2. Creation of a Virtual Machine 
 
 ## Nested Virtualisation Support
-Before enabling Hyper-V on a virtual machine, you need to ensure that it supports **nested virtualisation** (not all virtual machine series support nested virtualisation).
+Before enabling Hyper-V on a virtual machine, you need to ensure that it supports **nested virtualisation** (not all virtual machine series support nested virtualisation). If you enable the Hyper-V role on a virtual machine that does not support nested virtualisation, you may see an error similar to the one below.
+![](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-Enable-Role-Fail.jpg)
+
 
 To determine if the virtual machine series supports nested virtualisation, you can go to the [Azure Virtual Machine documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes-general) and look at the capability section for the series. Look for the **Nested Virtualization** capability and confirm that it says **Supported**
 
