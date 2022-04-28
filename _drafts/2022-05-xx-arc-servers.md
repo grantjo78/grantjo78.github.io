@@ -4,7 +4,6 @@ title: "Creating a Kubernetes Cluster with Raspberry Pi Devices  - Part 1: The S
 categories: [Arc]
 ---
 
-
 ```
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
 
