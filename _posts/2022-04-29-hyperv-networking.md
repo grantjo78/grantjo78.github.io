@@ -150,8 +150,8 @@ Configure the NAT network by running the below command.
 New-NetNat -Name <NATOutsideName> -InternalIPInterfaceAddressPrefix <NAT subnet prefix>
 ```
 
-- Name: Describes the name of the NAT network (e.g. AzureNAT)
-- InternalIPInterfaceAddressPrefix: NAT Subnet Prefix Length (e.g. 192.168.0.0/24)
+- **Name**: Describes the name of the NAT network (e.g. AzureNAT)
+- **InternalIPInterfaceAddressPrefix**: NAT Subnet Prefix Length (e.g. 192.168.0.0/24)
 
 ```
 Example:
