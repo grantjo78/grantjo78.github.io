@@ -6,13 +6,15 @@ categories: [Arc for Servers]
 
 Today I've started playing with Azure Arc-enabled servers and will be exploring the capabilities over several articles.
 
-## What is Azure Arc-enabled servers?
+## What is Azure Arc-enabled Servers?
 
-![Azure Arc-enabled servers lets you manage Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider. This management experience is designed to be consistent with how you manage native Azure virtual machines, using standard Azure constructs such as Azure Policy and applying tags.](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview)
+[Azure Arc-enabled servers lets you manage Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider. This management experience is designed to be consistent with how you manage native Azure virtual machines, using standard Azure constructs such as Azure Policy and applying tags.](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview)
 
-![When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. Each connected machine has a Resource ID enabling the machine to be included in a resource group.](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview)
+[When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. Each connected machine has a Resource ID enabling the machine to be included in a resource group.](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview)
 
-Before I can get started, I'm going to need to Arc enable a server. To simulate a server that is outside of Azure I'm going to leverage a virtual machine that I've deployed on a Hyper-V host in Azure (VM1). If you would like to know how I did this, you can review my previous posts on [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%}).
+## Getting Started
+
+To simulate a server that is outside of Azure, I'm going to leverage a virtual machine that I've deployed on a Hyper-V host within Azure (VM1). If you would like to know how I did this, you can review my previous posts on [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%}).
 
 ![](/docs/assets/images/2022-05-01-arc-servers/arc-hyperv-guest.jpg)
 
