@@ -117,3 +117,4 @@ time="xxxx-xx-xxxxx:xx:xx-xx:xx" level=info msg="Successfully Onboarded Resource
 Switching back to the Azure Portal, the server that had the Arc agent installed onto, should now appear within the Azure Arc Servers blade.
 
 ![](/docs/assets/images/2022-05-01-arc-servers/arc-vm-onboarded.jpg)
+
