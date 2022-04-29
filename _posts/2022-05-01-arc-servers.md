@@ -6,7 +6,7 @@ categories: [Arc for Servers]
 
 Today I've started playing with Azure Arc-enabled servers and will be exploring the capabilities.
 
-Before I can get started, I'm going to need to Arc enable a server. To simulate a server that is outside of Azure I'm going to leverage a virtual machine that I've deployed on a Hyper-V host in Azure (VM1). If you would like to know how I did this, you can review my previous posts on [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%})
+Before I can get started, I'm going to need to Arc enable a server. To simulate a server that is outside of Azure I'm going to leverage a virtual machine that I've deployed on a Hyper-V host in Azure (VM1). If you would like to know how I did this, you can review my previous posts on [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%}).
 
 ![](/docs/assets/images/2022-05-01-arc-servers/arc-hyperv-guest.jpg)
 
