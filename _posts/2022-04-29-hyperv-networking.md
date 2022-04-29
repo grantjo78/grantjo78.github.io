@@ -101,9 +101,9 @@ New-NetIPAddress -IPAddress <NAT Gateway IP> -PrefixLength <NAT Subnet Prefix Le
 
 ```
 
-- IPAddress: Specifies the IPv4 or IPv6 address to use as the NAT gateway IP (e.g. 192.168.0.1)
-- PrefixLength: Defines the NAT local subnet size (subnet mask) (e.g. 255.255.255.0)
-- InterfaceIndex: Interface index of the virtual switch (e.g. 14)
+- **IPAddress**: Specifies the IPv4 or IPv6 address to use as the NAT gateway IP (e.g. 192.168.0.1)
+- **PrefixLength**: Defines the NAT local subnet size (subnet mask) (e.g. 255.255.255.0)
+- **InterfaceIndex**: Interface index of the virtual switch (e.g. 14)
 
 ```
 Example:
