@@ -45,10 +45,6 @@ Name                                               SwitchType NetAdapterInterfac
 Microsoft Hyper-V Network Adapter - Virtual Switch External   Microsoft Hyper-V Network Adapter                              
 
 ```
-
-![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-OriginalSwitch.jpg)
-
-
 To create the NAT Virtual Switch, follow the below commands:
 
 ### Step 1: Create a new Internal Virtual Switch
@@ -59,15 +55,18 @@ Create a new **Internal** virtual switch by running the below command.
 New-VMSwitch -SwitchName <SwitchName> -SwitchType Internal
 ```
 
-- SwitchName: Name to give the virtual switch.
+- **SwitchName**: Name to give the virtual switch.
 
 ```
 Example:
 
 New-VMSwitch -SwitchName "Azure" -SwitchType Internal
-```
 
-![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-AzureSwitch.jpg)
+Name  SwitchType NetAdapterInterfaceDescription
+----  ---------- ------------------------------
+Azure Internal                                 
+
+```
 
 ### Step 2: Identity Virtual Switches Interface Index
 
@@ -77,7 +76,20 @@ Identify the newly created virtual switches interface index number.
 Get-NetAdapter
 ```
 
-![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-ifIndex.jpg)
+```
+Example:
+
+Get-NetAdapter
+
+Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
+----                      --------------------                    ------- ------       ----------             ---------
+vEthernet (Microsoft H... Hyper-V Virtual Ethernet Adapter              9 Up           00-22-48-94-F6-8A       100 Gbps
+vEthernet (Azure)         Hyper-V Virtual Ethernet Adapter #2          14 Up           00-15-5D-02-05-06        10 Gbps
+Ethernet                  Microsoft Hyper-V Network Adapter             6 Up           00-22-48-94-F6-8A       100 Gbps
+Ethernet 4                Mellanox ConnectX-5 Virtual Adapter #3       22                                         0 bps
+```
+
+The **ifIndex** number that we would need in this example is **14**.
 
 
 ### Step 3: Configure NAT Gateway IP Address
@@ -91,15 +103,44 @@ New-NetIPAddress -IPAddress <NAT Gateway IP> -PrefixLength <NAT Subnet Prefix Le
 
 - IPAddress: Specifies the IPv4 or IPv6 address to use as the NAT gateway IP (e.g. 192.168.0.1)
 - PrefixLength: Defines the NAT local subnet size (subnet mask) (e.g. 255.255.255.0)
-- InterfaceIndex: Interface index of the virtual switch (e.g. 18)
+- InterfaceIndex: Interface index of the virtual switch (e.g. 14)
 
 ```
 Example:
 
-New-NetIPAddress -IPAddress 192.168.0.1 -PrefixLength 24 -InterfaceIndex 18
-```
+New-NetIPAddress -IPAddress 192.168.0.1 -PrefixLength 24 -InterfaceIndex 14
 
-![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-NATIP.jpg)
+
+IPAddress         : 192.168.0.1
+InterfaceIndex    : 14
+InterfaceAlias    : vEthernet (Azure)
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 24
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Tentative
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 192.168.0.1
+InterfaceIndex    : 14
+InterfaceAlias    : vEthernet (Azure)
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 24
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Invalid
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : PersistentStore
+
+
+```
 
 ### Step 4: Configure NAT Network
 
@@ -116,9 +157,21 @@ New-NetNat -Name <NATOutsideName> -InternalIPInterfaceAddressPrefix <NAT subnet 
 Example:
 
 New-NetNat -Name AzureNAT -InternalIPInterfaceAddressPrefix 192.168.0.0/24
-```
 
-![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-NewNat.jpg)
+Name                             : AzureNAT
+ExternalIPInterfaceAddressPrefix : 
+InternalIPInterfaceAddressPrefix : 192.168.0.0/24
+IcmpQueryTimeout                 : 30
+TcpEstablishedConnectionTimeout  : 1800
+TcpTransientConnectionTimeout    : 120
+TcpFilteringBehavior             : AddressDependentFiltering
+UdpFilteringBehavior             : AddressDependentFiltering
+UdpIdleSessionTimeout            : 120
+UdpInboundRefresh                : False
+Store                            : Local
+Active                           : True
+
+```
 
 ## Guest VM Changes
 
