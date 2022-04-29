@@ -35,6 +35,17 @@ Get-VMSwitch
 
 The output will show the virtual switches that have been created.
 
+```
+Example:
+
+Get-VMSwitch
+
+Name                                               SwitchType NetAdapterInterfaceDescription   
+----                                               ---------- ------------------------------   
+Microsoft Hyper-V Network Adapter - Virtual Switch External   Microsoft Hyper-V Network Adapter                              
+
+```
+
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-OriginalSwitch.jpg)
 
 
