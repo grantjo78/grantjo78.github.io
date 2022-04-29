@@ -42,7 +42,7 @@ Select **Add**.
 
 ### Step 3: Onboarding Method
 
-Under **Add a single server** select **Generate script***
+Under **Add a single server** select **Generate script**
 
 ![](/docs/assets/images/2022-04-29-arc-servers/arc-servers-single-script.jpg)
 
