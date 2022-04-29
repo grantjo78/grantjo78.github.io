@@ -194,7 +194,8 @@ The NAT network does not dynamically assign IP addresses to guest virtual machin
 *["Since WinNAT by itself does not allocate and assign IP addresses to an endpoint (e.g. VM), you will need to do this manually from within the VM itself - i.e. set IP address within range of NAT internal prefix, set default gateway IP address, set DNS server information."](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/setup-nat-network#connect-a-virtual-machine)*
 
 Configure the guest networking interface with the following:
-- **Static IP address**: This should be within the address range of the NAT network specified above (e.g. 192.168.0.10)- Subnet mask: This should match the subnet mask specified above (e.g. 255.255.255.0)
+- **Static IP address**: This should be within the address range of the NAT network specified above (e.g. 192.168.0.10)
+- **Subnet mask**: This should match the subnet mask specified above (e.g. 255.255.255.0)
 - **Default gateway**: This should match the NAT Gateway IP address (e.g. 192.168.0.1)
 - **DNS Server**: IP address of a DNS server that is able to perform name resolution (e.g. 8.8.8.8) 
 
