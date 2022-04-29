@@ -133,6 +133,6 @@ The NAT network does not dynamically assign IP addresses to guest virtual machin
 
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-IP.jpg)
 
-Once the above configurations have been made, the guest should be able to access the internet.
+Once the above configurations have been made, the guest virtual machine should be able to access the internet.
 
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-InternetAccess.jpg)
