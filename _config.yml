@@ -23,3 +23,6 @@ gems:
   - jekyll-seo-tag
 
 google_analytics: G-8DHWYQ59SY
+
+plugins: 
+  - jekyll-sitemap
