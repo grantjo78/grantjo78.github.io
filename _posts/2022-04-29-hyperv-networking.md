@@ -10,7 +10,7 @@ VM1's has been allocated to the virtual switch that was created during the enabl
 
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-vSwitch-Original.jpg)
 
- *"Microsoft Hyper-V Network Adapter - Virtual Switch"* configuration indicates that it has been configured as an [external virtual switch](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/plan-hyper-v-networking-in-windows-server#switch-and-network-adapter-choices). This configuration does not allow for my guest virtual machine to egress traffic outside of the Hyper-V host in Azure.
+ *"Microsoft Hyper-V Network Adapter - Virtual Switch"* configuration indicates that it has been configured as an [external virtual switch](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/plan-hyper-v-networking-in-windows-server#switch-and-network-adapter-choices). This configuration does not allow for my guest virtual machine to egress traffic outside of the Hyper-V host. 
 
 ![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-vSwitch-Original.jpg)
 
@@ -125,7 +125,11 @@ Click on the pull down and select the new virtual switch (e.g. Azure)
 
 ### Step 6: Guest Machine IP Address
 
-The NAT network does not dynamically assign IP addresses to guest virtual machines. Configure the guest networking interface with the following:
+The NAT network does not dynamically assign IP addresses to guest virtual machine, this will require the IP address, subnet, default gateway and dns addresses to be manually assigned. 
+
+*["Since WinNAT by itself does not allocate and assign IP addresses to an endpoint (e.g. VM), you will need to do this manually from within the VM itself - i.e. set IP address within range of NAT internal prefix, set default gateway IP address, set DNS server information."]*(https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/setup-nat-network#connect-a-virtual-machine)
+
+Configure the guest networking interface with the following:
 - Static IP address: This should be within the address range of the NAT network specified above (e.g. 192.168.0.10)- Subnet mask: This should match the subnet mask specified above (e.g. 255.255.255.0)
 - Default gateway: This should match the NAT Gateway IP address (e.g. 192.168.0.1)
 - DNS Sever: IP address of a DNS server that is able to perform name resolution (e.g. 8.8.8.8) 
