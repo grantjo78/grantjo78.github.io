@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Creating a Kubernetes Cluster with Raspberry Pi Devices - Part 3: Installing Kubernetes onto the Master Node"
+title: "Kubernetes Cluster with Raspberry Pi Devices - Part 3: Installing Kubernetes onto the Master Node"
 categories: [Raspberry Pi, K3s]
 ---
 

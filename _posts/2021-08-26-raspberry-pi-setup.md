@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Creating a Kubernetes Cluster with Raspberry Pi Devices - Part 2: Setting up the Raspberry Pi"
+title: "Kubernetes Cluster with Raspberry Pi Devices - Part 2: Setting up the Raspberry Pi"
 categories: [Raspberry Pi]
 ---
 

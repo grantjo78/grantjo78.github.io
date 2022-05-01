@@ -17,7 +17,7 @@ order: 2
 [Part 3: Networking - NAT]({% post_url 2022-04-29-hyperv-networking%})
 
 
-## Creating a Kubernetes Cluster with Raspberry Pi Devices
+## Kubernetes Cluster with Raspberry Pi Devices
 
 [Part 1: The Shopping List]({% post_url 2021-08-19-raspberry-pi-shopping-list%})
 
