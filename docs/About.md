@@ -13,4 +13,4 @@ I decided to start this  blog for a number of reason:
 3. To collect feedback from others to improve upon what I have done
 4. And to have a bit of fun
 
-Now for the [disclaimer](/docs/Disclaimer.md).
+Now for the [disclaimer](/docs/Disclaimer.html).
