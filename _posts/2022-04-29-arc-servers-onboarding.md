@@ -5,6 +5,7 @@ categories: [Arc for Servers]
 ---
 
 In this series I'm going to be exploring Azure Arc-enabled servers. 
+
 [Part 1: Onboarding (Single Server)]({% post_url 2022-04-29-arc-servers-onboarding%})
 
 This article will cover: 
