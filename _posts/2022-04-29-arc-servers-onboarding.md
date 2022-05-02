@@ -4,7 +4,10 @@ title: "Azure Arc-enabled Servers - Part 1: Onboarding (Single Server)"
 categories: [Arc for Servers]
 ---
 
-In this series I'm going to be exploring Azure Arc-enabled servers. This article will cover: 
+In this series I'm going to be exploring Azure Arc-enabled servers. 
+[Part 1: Onboarding (Single Server)]({% post_url 2022-04-29-arc-servers-onboarding%})
+
+This article will cover: 
 1. [What is Azure Arc-enabled Servers?](#what-is-azure-arc-enabled-servers)
 2. [The Environment](#the-environment)
 3. [Arc-enabled Servers - Azure Configuration](#arc-enabled-servers---azure-configuration)
