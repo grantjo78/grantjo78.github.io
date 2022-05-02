@@ -4,11 +4,11 @@ title: "Azure Arc-enabled Servers - Part 1: Onboarding (Single Server)"
 categories: [Arc for Servers]
 ---
 
-Today I've started playing with Azure Arc-enabled servers and will be exploring the capabilities over several articles. In this article I'm going to cover the following:
+In this series I'm going to be exploring Azure Arc-enabled server. This article will cover: 
 1. What is Azure Arc-enabled Servers?
 2. The Environment
-3. Azure Configuration
-4. Arc Agent Deployment and Configuration
+3. Arc-enabled Servers - Azure Configuration
+4. Arc-enabled Servers - Agent Deployment and Configuration
 
 
 
@@ -31,7 +31,7 @@ To simulate a server that is outside of Azure, I'm going to leverage nested virt
 
 Within the Hyper-V host, I've deployed a single virtual machine called VM1. VM1 is running Windows Server 2022 and is attached to a NAT Gateway enabled virtual switch.
 
-## Azure Configuration
+## Arc-enabled Servers - Azure Configuration
 
 ### Step 1: Azure Arc Service
 
@@ -87,7 +87,7 @@ Copy or download the script. This will be used to deploy and configure the Arc a
 
 ![](/docs/assets/images/2022-04-29-arc-servers/arc-servers-single-downloadscript.jpg)
 
-## Arc Agent Deployment and Configuration
+## Arc-enabled Servers - Agent Deployment and Configuration
 
 In this section I will be deploying the Arc agent onto the target server.
 
