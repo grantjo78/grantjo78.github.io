@@ -12,7 +12,7 @@ Today I've started playing with Azure Arc-enabled servers and will be exploring 
 
 [When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. Each connected machine has a Resource ID enabling the machine to be included in a resource group.](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview)
 
-## Getting Started
+## Environment
 
 To simulate a server that is outside of Azure, I'm going to leverage a virtual machine (VM1) that I've deployed on a Hyper-V host within Azure, using nested virtualisation. If you would like to know how I did this, you can review my previous post [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%}).
 
