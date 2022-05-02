@@ -4,14 +4,11 @@ title: "Azure Arc-enabled Servers - Part 1: Onboarding (Single Server)"
 categories: [Arc for Servers]
 ---
 
-In this series I'm going to be exploring Azure Arc-enabled server. This article will cover: 
+In this series I'm going to be exploring Azure Arc-enabled servers. This article will cover: 
 1. What is Azure Arc-enabled Servers?
 2. The Environment
 3. Arc-enabled Servers - Azure Configuration
 4. Arc-enabled Servers - Agent Deployment and Configuration
-
-
-
 
 ## What is Azure Arc-enabled Servers?
 
