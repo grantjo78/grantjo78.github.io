@@ -5,8 +5,11 @@ categories: [Hyper-V]
 ---
 
 In this series I'm going to be exploring **Nested Virtualisation** on Azure. 
+
 [Part 1: Virtual Machine Requirements]({% post_url 2022-04-27-hyperv-vm-deployment%})
+
 [Part 2: Enabling the Hyper-V Role]({% post_url 2022-04-28-hyperv-enable-role%})
+
 [Part 3: Networking - NAT]({% post_url 2022-04-29-hyperv-networking%})
 
 This article will cover: 
