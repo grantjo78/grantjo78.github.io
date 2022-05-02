@@ -20,7 +20,7 @@ In this series I'm going to be exploring Azure Arc-enabled servers. This article
 
 ### Hyper-V Host
 
-To simulate a server that is outside of Azure, I'm going to leverage nested virtualisation within a virtual machine in Azure. This virtual machine will have the Hyper-V role enabled. If you would like to know how I did this, you can review my previous post [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%}).
+To simulate a server that is outside of Azure, I'm going to leverage nested virtualisation within an Azure virtual machine by enabling the Hyper-V role. If you would like to know how I did this, you can review my previous post [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%}).
 
 ![](/docs/assets/images/2022-04-29-arc-servers/arc-hyperv-guest.jpg)
 
