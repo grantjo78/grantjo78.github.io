@@ -4,7 +4,14 @@ title: "Azure Arc-enabled Servers - Part 1: Onboarding (Single Server)"
 categories: [Arc for Servers]
 ---
 
-Today I've started playing with Azure Arc-enabled servers and will be exploring the capabilities over several articles.
+Today I've started playing with Azure Arc-enabled servers and will be exploring the capabilities over several articles. In this article I'm going to cover the following:
+1. What is Azure Arc-enabled Servers?
+2. The Environment
+3. Azure Configuration
+4. Arc Agent Deployment and Configuration
+
+
+
 
 ## What is Azure Arc-enabled Servers?
 
@@ -12,15 +19,19 @@ Today I've started playing with Azure Arc-enabled servers and will be exploring 
 
 [When a hybrid machine is connected to Azure, it becomes a connected machine and is treated as a resource in Azure. Each connected machine has a Resource ID enabling the machine to be included in a resource group.](https://docs.microsoft.com/en-us/azure/azure-arc/servers/overview)
 
-## Environment
+## The Environment
 
-To simulate a server that is outside of Azure, I'm going to leverage a virtual machine (VM1) that I've deployed on a Hyper-V host within Azure, using nested virtualisation. If you would like to know how I did this, you can review my previous post [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%}).
+### Hyper-V Host
+
+To simulate a server that is outside of Azure, I'm going to leverage nested virtualisation within a virtual machine in Azure. This virtual machine will have the Hyper-V role enabled. If you would like to know how I did this, you can review my previous post [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%}).
 
 ![](/docs/assets/images/2022-04-29-arc-servers/arc-hyperv-guest.jpg)
 
-To Arc-enable a single server, follow the below steps.
+### Guest Virtual Machine
 
-## Azure Portal
+Within the Hyper-V host, I've deployed a single virtual machine called VM1. VM1 is running Windows Server 2022 and is attached to a NAT Gateway enabled virtual switch.
+
+## Azure Configuration
 
 ### Step 1: Azure Arc Service
 
@@ -76,7 +87,7 @@ Copy or download the script. This will be used to deploy and configure the Arc a
 
 ![](/docs/assets/images/2022-04-29-arc-servers/arc-servers-single-downloadscript.jpg)
 
-## Target Server
+## Arc Agent Deployment and Configuration
 
 In this section I will be deploying the Arc agent onto the target server.
 
@@ -116,9 +127,9 @@ Once authication has been completed successfully, the installation will complete
 time="xxxx-xx-xxxxx:xx:xx-xx:xx" level=info msg="Successfully Onboarded Resource to Azure" VM Id=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx"
 ```
 
-## Azure Portal
+### Azure Portal
 
-Switching back to the Azure Portal, the server that had the Arc agent installed onto, should now appear within the Azure Arc Servers blade.
+Switching back to the Azure Portal, the server that had the Arc agent installed onto should now appear within the Azure Arc Servers blade.
 
 ![](/docs/assets/images/2022-04-29-arc-servers/arc-vm-onboarded.jpg)
 
