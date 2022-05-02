@@ -4,11 +4,15 @@ title: "Nested Virtualization on Azure - Part 1: Virtual Machine Requirements"
 categories: [Hyper-V]
 ---
 
-This week I had a requirement to enable Hyper-V within a virtual machine on Azure. I've done this many times before but I've never documented the process and I always seem to forget a step. 
+In this series I'm going to be exploring **Nested Virtualisation** on Azure. 
+[Part 1: Virtual Machine Requirements]({% post_url 2022-04-27-hyperv-vm-deployment%})
+[Part 2: Enabling the Hyper-V Role]({% post_url 2022-04-28-hyperv-enable-role%})
+[Part 3: Networking - NAT]({% post_url 2022-04-29-hyperv-networking%})
 
-To start off with, I'm going to look at the following:
-1. Nested Virtualisation Support
-2. Creation of a Virtual Machine 
+
+This article will cover: 
+1. [Nested Virtualisation Support](#nested-virtualisation-support)
+2. [Nested Virtual Machine Deployment](#nested-virtual-machine-deployment)
 
 ## Nested Virtualisation Support
 Before enabling Hyper-V on a virtual machine, you need to ensure that it supports **nested virtualisation** (not all virtual machine series support nested virtualisation). If you enable the Hyper-V role on a virtual machine that does not support nested virtualisation, you may see an error similar to the one below.
@@ -26,7 +30,7 @@ Below is an example of the [general purpose Dv5-series](https://docs.microsoft.c
 
 ![Nested Virtualisation Not Supported](/docs/assets/images/2022-04-27-hyperv-vm-deployment/VM-SKU-NestedV-Supported.jpg)
 
-## Creation of a Virtual Machine
+## Nested Virtual Machine Deployment
 
 I'll quickly running through the deployment of a virtual machine and highlight areas that you will need to consider.
 
