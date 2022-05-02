@@ -9,7 +9,6 @@ In this series I'm going to be exploring **Nested Virtualisation** on Azure.
 [Part 2: Enabling the Hyper-V Role]({% post_url 2022-04-28-hyperv-enable-role%})
 [Part 3: Networking - NAT]({% post_url 2022-04-29-hyperv-networking%})
 
-
 This article will cover: 
 1. [Nested Virtualisation Support](#nested-virtualisation-support)
 2. [Nested Virtual Machine Deployment](#nested-virtual-machine-deployment)
