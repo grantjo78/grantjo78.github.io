@@ -26,11 +26,13 @@ This article will cover:
 
 To simulate a server that is outside of Azure, I'm going to leverage nested virtualisation within an Azure virtual machine by enabling the Hyper-V role. If you would like to know how I did this, you can review my previous post [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%}).
 
-![](/docs/assets/images/2022-04-29-arc-servers/arc-hyperv-guest.jpg)
+![](/docs/assets/images/2022-04-29-arc-servers/arc-hyperv-host.jpg)
 
 ### Guest Virtual Machine
 
 Within the Hyper-V host, I've deployed a single virtual machine called VM1. VM1 is running Windows Server 2022 and is attached to a NAT Gateway enabled virtual switch.
+
+[](/docs/assets/images/2022-04-29-arc-servers/arc-hyperv-guest-vm1.jpg)
 
 ## Arc-enabled Servers - Azure Configuration
 
