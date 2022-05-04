@@ -176,7 +176,7 @@ Failed to validate if the active namespace exists on the kubernetes cluster. Exc
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-validation.jpg)
 
-### Step 10: 
+### Step 11: 
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-arc-cluster.jpg)
 
