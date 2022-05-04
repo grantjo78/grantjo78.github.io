@@ -28,7 +28,6 @@ Within the Hyper-V host, I've deployed a two virtual machines:
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-hyperv-guest-k3s.jpg)
 
 
-
 ### Kubernetes Environment
 
 For the Kubernetes environment, I'm utilising [K3s](https://k3s.io/) because it's very quick to setup and lightweight. If you're interested in how to deploy K3s and configure a cluster you can follow the [quickstart guide](https://rancher.com/docs/k3s/latest/en/quick-start/).
@@ -45,6 +44,9 @@ k3s-2   Ready    <none>                 22h   v1.22.7+k3s1
 
 ### Arc-enabled Cluster
 
+In [Part 1]({% post_url 2022-05-03-arc-k8s-onboarding%}) of this series I covered the onboarding of a Kubernetes cluster into Arc. I will be using this cluster in this article.
+
+![](/docs/assets/images/2022-05-03-arc-k8s-resources/arc-k8s-cluster-overview.jpg)
 
 ## Service Account Tokens
 
