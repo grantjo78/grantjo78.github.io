@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Azure Arc-enabled Kubernetes - Part 2: Kubernetes Resources"
+title: "Azure Arc-enabled Kubernetes - Part 2: Cluster Resources"
 categories: [Arc for Kubernetes]
 ---
 This article will explore Kubernetes resources for an Arc-enabled cluster.

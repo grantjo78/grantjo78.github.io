@@ -8,7 +8,7 @@ order: 2
 
 [Part 1: Onboarding]({% post_url 2022-05-03-arc-k8s-onboarding%})
 
-[Part 2: Exploring Resources]({% post_url 2022-05-04-arc-k8s-resources%})
+[Part 2: Cluster Resources]({% post_url 2022-05-04-arc-k8s-resources%})
 
 ## Azure Arc-enabled - Servers 
 
