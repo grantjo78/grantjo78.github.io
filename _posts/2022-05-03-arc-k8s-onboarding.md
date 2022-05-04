@@ -260,10 +260,15 @@ The Kubernetes cluster should show as successfully connected to Azure. Select **
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-validation.jpg)
 
-### Step 11: 
+### Step 11: Cluster overview
 An overview of the cluster that was onboarded should be visible.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-arc-cluster.jpg)
 
+### Step 12: Kubernetes clusters
+
+Switching back to the Azure Arc - Infrastructure view, the new cluster can be access from here.
+
+![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-onboard-newcluster.jpg)
 
 
