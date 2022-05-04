@@ -111,16 +111,12 @@ Under the **Infrastructure** section, select **Kubernetes clusters**.
 
 ```
 k3s-admin@k3s-1:~$ az login
-To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code Q689JBHED to authenticate.
+To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code xxxxxxxx to authenticate.
 ```
 
 ```
 k3s-admin@k3s-1:~$ az account set --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx
 k3s-admin@k3s-1:~$
-```
-
-```
-k3s-admin@k3s-1:~$ az connectedk8s connect --name k3s-cluster-01 --resource-group rg-arc-kubernetes-hyperv --location australiaeast --tags Datacenter=Hyperv-01 City=Perth StateOrDistrict=WA CountryOrRegion=Australia    
 ```
 
 ```
