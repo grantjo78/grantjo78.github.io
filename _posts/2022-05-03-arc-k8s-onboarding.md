@@ -10,13 +10,16 @@ In this series I'm going to be exploring Azure Arc-enabled Kubernetes.
 
 [Part 2: Cluster Resources]({% post_url 2022-05-04-arc-k8s-resources%})
 
+[Part 3: Monitoring - Coming Soon]
+
+[Part 4: GitOps - Coming Soon]
+
 This article will cover: 
 1. [What is Azure Arc-enabled Kubernetes?](#what-is-azure-arc-enabled-kubernetes)
 2. [The Environment](#the-environment)
-3. [Prerequisites]()
+3. [Prerequisites](#prerequisites)
 4. [Arc-enabled Kubernetes - Azure Configuration](#arc-enabled-kubernetes---azure-configuration)
-4. [Arc-enabled Kubernetes - Agent Deployment](#arc-enabled-kubernetes---agent-deployment)
-
+5. [Arc-enabled Kubernetes - Agent Deployment](#arc-enabled-kubernetes---agent-deployment)
 
 ## What is Azure Arc-enabled Kubernetes?
 
@@ -75,6 +78,34 @@ k3s-2   Ready    <none>                 22h   v1.22.7+k3s1
 ```
 
 ## Prerequisites
+
+### Azure Resource Providers
+
+The following resource providers need to be enabled within the subscription that Arc-enabled Kubernetes will be deployed to:
+- Microsoft.Kubernetes
+- Microsoft.KubernetesConfiguration
+- Microsoft.ExtendedLocation
+
+From Azure CLI execute the below commands to register the providers.
+
+```
+az provider register --namespace Microsoft.Kubernetes
+az provider register --namespace Microsoft.KubernetesConfiguration
+az provider register --namespace Microsoft.ExtendedLocation
+```
+
+To confirm that the providers have been successfully registered, execute the below commands.
+
+```
+az provider show -n Microsoft.Kubernetes -o table
+az provider show -n Microsoft.KubernetesConfiguration -o table
+az provider show -n Microsoft.ExtendedLocation -o table
+```
+
+### Kubernetes Node
+
+For the master node, the [Azure Cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt) needs to be installed.
+
 
 ## Arc-enabled Kubernetes - Azure Configuration
 
