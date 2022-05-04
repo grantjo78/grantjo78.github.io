@@ -103,7 +103,7 @@ Under the **Infrastructure** section, select **Kubernetes clusters**.
 
 ### Step 7: Run script
 
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-run-script-stop.jpg)
+![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-arc-run-script-stop.jpg)
 
 ## Arc-enabled Kubernetes - Agent Deployment
 
