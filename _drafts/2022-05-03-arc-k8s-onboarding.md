@@ -103,29 +103,11 @@ Under the **Infrastructure** section, select **Kubernetes clusters**.
 
 ### Step 7: Run script
 
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-run-script.jpg)
+![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-run-script-stop.jpg)
 
 ## Arc-enabled Kubernetes - Agent Deployment
 
 ### Step 8: Agent deployment
-
-
-### Step 9: Run script
-
-### Step 10: Verification
-
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-run-script-stop.jpg)
-
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-validation.jpg)
-
-### Step 10: 
-
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-arc-cluster.jpg)
-```
-az extension add --name connectedk8s
-```
-
-k3s-admin@k3s-1:~$ az extension add --name connectedk8s
 
 ```
 k3s-admin@k3s-1:~$ az login
@@ -133,18 +115,12 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
 ```
 
 ```
-k3s-admin@k3s-1:~$ az account set --subscription ed26a14c-d56c-4b07-b182-dd6fd6f1dbcf
+k3s-admin@k3s-1:~$ az account set --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx
 k3s-admin@k3s-1:~$
 ```
 
 ```
 k3s-admin@k3s-1:~$ az connectedk8s connect --name k3s-cluster-01 --resource-group rg-arc-kubernetes-hyperv --location australiaeast --tags Datacenter=Hyperv-01 City=Perth StateOrDistrict=WA CountryOrRegion=Australia    
-```
-```
-k3s-admin@k3s-1:~$ k3s-admin@k3s-1:~$ az connectedk8s connect --name k3s-cluster-01 --resource-group rg-arc-kubernetes-hyperv --location australiaeast --tags Datacenter=Hyperv-01 City=Perth StateOrDistrict=WA CountryOrRegion=Australia
-This operation might take a while...
-
-Problem loading the kubeconfig file.Invalid kube-config file. No configuration found.
 ```
 
 ```
@@ -193,3 +169,24 @@ Failed to validate if the active namespace exists on the kubernetes cluster. Exc
 }
 k3s-admin@k3s-1:~$
 ```
+
+### Step 9: Run script
+
+![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-run-script.jpg)
+
+### Step 10: Verification
+
+![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-validation.jpg)
+
+### Step 10: 
+
+![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-arc-cluster.jpg)
+
+
+
+### Troubleshooting
+
+
+
+
+
