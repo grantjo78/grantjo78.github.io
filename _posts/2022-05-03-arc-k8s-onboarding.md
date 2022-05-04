@@ -6,8 +6,9 @@ categories: [Arc for Kubernetes]
 
 In this series I'm going to be exploring Azure Arc-enabled Kubernetes.
 
-[Part 1: Onboarding]{% post_url 2022-05-03-arc-k8s-onboarding%})
-Part 2: Kubernetes Resources
+[Part 1: Onboarding]({% post_url 2022-05-03-arc-k8s-onboarding%})
+
+[Part 2: Kubernetes Resources]()
 
 This article will cover: 
 1. [What is Azure Arc-enabled Kubernetes?](#what-is-azure-arc-enabled-kubernetes)
