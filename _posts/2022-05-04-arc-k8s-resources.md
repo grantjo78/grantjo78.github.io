@@ -54,7 +54,7 @@ When you select one of the resources under **Kubernetes resources** (e.g. Namesp
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-namespace-signin.jpg)
 
-The steps below will walk you through creating a token to be utilised by Arc to allow visibility into the clusters resources.
+The steps below will walk through the creatation of a token for Arc to utilise, providing visibility to the clusters resources.
 
 ### Step 1: Create Service Account
 
@@ -117,7 +117,7 @@ k3s-admin@k3s-1:~$ echo $TOKEN
 ```
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-token.jpg)
 
-### Step 5: 
+### Step 5: Paste Token
 
 Switch back to the Azure Portal and paste the token into the **Sign in** box.
 
@@ -125,7 +125,7 @@ Switch back to the Azure Portal and paste the token into the **Sign in** box.
 
 Select **Sign in**.
 
-### Step 6: 
+### Step 6: Resources
 
 Once the sign in has completed the resources from the cluster will be visible.
 
