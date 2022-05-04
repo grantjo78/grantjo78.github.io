@@ -3,7 +3,7 @@ layout: post
 title: "Azure Arc-enabled Kubernetes - Part 2: Kubernetes Resources"
 categories: [Arc for Kubernetes]
 ---
-This article is going to cover exploring Kubernetes resources for an onboarded Arc-enabled cluster.
+This article will explore Kubernetes resources for an Arc-enabled cluster.
 
 This article will cover: 
 1. [The Environment](#the-environment)
@@ -119,7 +119,7 @@ k3s-admin@k3s-1:~$ echo $TOKEN
 
 ### Step 5: 
 
-Switch back to the Azure Portal and paste the token into the sign in box.
+Switch back to the Azure Portal and paste the token into the **Sign in** box.
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-token-paste.jpg)
 
@@ -127,7 +127,7 @@ Select **Sign in**.
 
 ### Step 6: 
 
-Once the sign in has completed, the resources from the cluster will be visible.
+Once the sign in has completed the resources from the cluster will be visible.
 
 #### Namespaces
 

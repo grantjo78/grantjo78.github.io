@@ -8,7 +8,7 @@ In this series I'm going to be exploring Azure Arc-enabled Kubernetes.
 
 [Part 1: Onboarding]({% post_url 2022-05-03-arc-k8s-onboarding%})
 
-[Part 2: Exploring Resources]()
+[Part 2: Exploring Resources]({% post_url 2022-05-04-arc-k8s-resources%})
 
 This article will cover: 
 1. [What is Azure Arc-enabled Kubernetes?](#what-is-azure-arc-enabled-kubernetes)
