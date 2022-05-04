@@ -116,7 +116,6 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
 
 ```
 k3s-admin@k3s-1:~$ az account set --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx
-k3s-admin@k3s-1:~$
 ```
 
 ```
@@ -163,7 +162,6 @@ Failed to validate if the active namespace exists on the kubernetes cluster. Exc
   "totalNodeCount": null,
   "type": "microsoft.kubernetes/connectedclusters"
 }
-k3s-admin@k3s-1:~$
 ```
 
 ### Step 9: Run script
