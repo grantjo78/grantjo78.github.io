@@ -12,7 +12,7 @@ This article will cover:
 1. [What is Azure Arc-enabled Kubernetes?](#what-is-azure-arc-enabled-kubernetes)
 2. [The Environment](#the-environment)
 3. [Arc-enabled Kubernetes - Azure Configuration](#arc-enabled-kubernetes---azure-configuration)
-4. Arc-enabled Kubernetes - Agent Deployment
+4. [Arc-enabled Kubernetes - Agent Deployment](#arc-enabled-kubernetes---agent-deployment)
 
 
 ## What is Azure Arc-enabled Kubernetes?
@@ -105,7 +105,7 @@ Under the **Infrastructure** section, select **Kubernetes clusters**.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-run-script.jpg)
 
-## Arc-enabled Kubernetes - Agent Configuration
+## Arc-enabled Kubernetes - Agent Deployment
 
 ### Step 8: Agent deployment
 

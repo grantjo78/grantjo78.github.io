@@ -12,7 +12,7 @@ This article will cover:
 1. [What is Azure Arc-enabled Servers?](#what-is-azure-arc-enabled-servers)
 2. [The Environment](#the-environment)
 3. [Arc-enabled Servers - Azure Configuration](#arc-enabled-servers---azure-configuration)
-4. [Arc-enabled Servers - Agent Deployment and Configuration](#arc-enabled-servers---agent-deployment-and-configuration)
+4. [Arc-enabled Servers - Agent Deployment](#arc-enabled-servers---agent-deployment)
 
 ## What is Azure Arc-enabled Servers?
 
@@ -90,7 +90,7 @@ Copy or download the script. This will be used to deploy and configure the Arc a
 
 ![](/docs/assets/images/2022-04-29-arc-servers/arc-servers-single-downloadscript.jpg)
 
-## Arc-enabled Servers - Agent Deployment and Configuration
+## Arc-enabled Servers - Agent Deployment
 
 In this section I will be deploying the Arc agent onto the target server.
 
