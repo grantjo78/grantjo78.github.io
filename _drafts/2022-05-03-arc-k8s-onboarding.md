@@ -107,16 +107,20 @@ Under the **Infrastructure** section, select **Kubernetes clusters**.
 
 ## Arc-enabled Kubernetes - Agent Deployment
 
-### Step 8: Agent deployment
+### Step 8: Azure Login
 
 ```
 k3s-admin@k3s-1:~$ az login
 To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code xxxxxxxx to authenticate.
 ```
 
+### Step 9: Set Subscription
+
 ```
 k3s-admin@k3s-1:~$ az account set --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx
 ```
+
+### Step 10: Agent Deployment
 
 ```
 k3s-admin@k3s-1:~$ az connectedk8s connect --name k3s-cluster-01 --resource-group rg-arc-kubernetes-hyperv --location australiaeast --tags Datacenter=Hyperv-01 City=Perth StateOrDistrict=WA CountryOrRegion=Australia --kube-config "/etc/rancher/k3s/k3s.yaml"
