@@ -11,7 +11,8 @@ In this series I'm going to be exploring Azure Arc-enabled Kubernetes.
 This article will cover: 
 1. [What is Azure Arc-enabled Kubernetes?](#what-is-azure-arc-enabled-kubernetes)
 2. [The Environment](#the-environment)
-3. [Arc-enabled Kubernetes - Azure Configuration](#arc-enabled-kubernetes---azure-configuration)
+3. [Prerequisites]()
+4. [Arc-enabled Kubernetes - Azure Configuration](#arc-enabled-kubernetes---azure-configuration)
 4. [Arc-enabled Kubernetes - Agent Deployment](#arc-enabled-kubernetes---agent-deployment)
 
 
@@ -21,7 +22,7 @@ This article will cover:
 
 ## The Environment
 
-Before I get started, I wanted to explain the environment that I will be working with.
+Before I get started, I wanted to describe the environment that I will be working with.
 
 ### The Hyper-V Host
 
@@ -71,7 +72,11 @@ k3s-1   Ready    control-plane,master   22h   v1.22.7+k3s1
 k3s-2   Ready    <none>                 22h   v1.22.7+k3s1
 ```
 
+## Prerequisites
+
 ## Arc-enabled Kubernetes - Azure Configuration
+
+To enable a Kubernetes cluster for Azure Arc, I'm going to walk through the steps via the Azure Portal.
 
 ### Step 1: Azure Arc Service
 
@@ -87,42 +92,81 @@ Under the **Infrastructure** section, select **Kubernetes clusters**.
 
 ### Step 3: Kubernetes clusters
 
+Select **Add a Kubernetes cluster with Azure Arc**.
+
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-add-cluster.jpg)
 
 ### Step 4: Prerequisites
+
+Select **Next: Cluster details > **
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-prerequisites.jpg)
 
 ### Step 5: Cluster details
 
+Populate the below fields. 
+- **Subscription**: The subscription where the Arc resources will be managed from.
+- **Resource group**: The resource group where the Arc resources will be managed from.
+- **Cluster name**: The name that you would like to give the cluster.
+- **Region**: The region where the Arc resources metadata will be stored (e.g. Australia East). 
+- **Outbound proxy**: Proxy configuration should Azure Cli and Kubernetes need to route via an outbound proxy.
+
+ Select **Next: Tags**.
+
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-cluster-details.jpg)
 
 ### Step 6: Tags
+
+Populate the fields with data that will be useful and select **Next: Run script**
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-tags.jpg)
 
 ### Step 7: Run script
 
+Copy/download the script.
+
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-arc-run-script-stop.jpg)
 
 ## Arc-enabled Kubernetes - Agent Deployment
 
+In this section I'll be deploying the Arc agent onto the cluster master node using the script that was copied/downloaded.
+
 ### Step 8: Azure Login
 
+SSH to the master node (e.g. k3s-1) and execute the below command to authienticate to Azure.
+
 ```
+az login
+
+Example:
+
 k3s-admin@k3s-1:~$ az login
 To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code xxxxxxxx to authenticate.
 ```
 
+This will prompt you to perform a device login.
+
 ### Step 9: Set Subscription
 
+Once authentication has been completed, the subscription to work in needs to be set. This is achieved with the below command.
+
 ```
+az account set --subscription <subscription ID>
+
+Example:
+
 k3s-admin@k3s-1:~$ az account set --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx
 ```
 
 ### Step 10: Agent Deployment
 
+To deploy and configure the Arc agent execute the below command.
+
 ```
+az connectedk8s connect --name k3s-cluster-01 --resource-group rg-arc-kubernetes-hyperv --location australiaeast --tags Datacenter=Hyperv-01 City=Perth StateOrDistrict=WA CountryOrRegion=Australia --kube-config "/etc/rancher/k3s/k3s.yaml"
+
+Example:
+
 k3s-admin@k3s-1:~$ az connectedk8s connect --name k3s-cluster-01 --resource-group rg-arc-kubernetes-hyperv --location australiaeast --tags Datacenter=Hyperv-01 City=Perth StateOrDistrict=WA CountryOrRegion=Australia --kube-config "/etc/rancher/k3s/k3s.yaml"
 This operation might take a while...
 
@@ -168,23 +212,25 @@ Failed to validate if the active namespace exists on the kubernetes cluster. Exc
 }
 ```
 
+I've used an additional parameter that wasn't included in the script:
+- **--kube-config**: Path to the kube config file. With K3s the kube config file is not stored with the user profile, which the agent deployment looks for.
+
 ### Step 9: Run script
+
+Switch back to the Azure Portal and select **Next: Verification >**.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-run-script.jpg)
 
 ### Step 10: Verification
 
+The Kubernetes cluster should show as successfully connected to Azure. Select **Go to the cluster**.
+
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-validation.jpg)
 
 ### Step 11: 
+An overview of the cluster that was onboarded should be visible.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-arc-cluster.jpg)
-
-
-
-### Troubleshooting
-
-
 
 
 

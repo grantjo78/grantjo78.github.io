@@ -4,7 +4,11 @@ title: "The Journey"
 order: 2
 ---
 
-## Azure Arc-enabled Servers 
+## Azure Arc-enabled - Kubernetes 
+
+[Part 1: Onboarding (Single Server)]({% post_url 2022-04-29-arc-servers-onboarding%})
+
+## Azure Arc-enabled - Servers 
 
 [Part 1: Onboarding (Single Server)]({% post_url 2022-04-29-arc-servers-onboarding%})
 

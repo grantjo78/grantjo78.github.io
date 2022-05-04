@@ -70,7 +70,7 @@ Select **Next**.
 
 Populate the fields and select **Next**.
 
-- **Subscription**: The subscription where the Arc resources will be managed from
+- **Subscription**: The subscription where the Arc resources will be managed from.
 - **Resource group**: The resource group where the Arc resources will be managed from.
 - **Region**: The region where the Arc resources metadata will be stored (e.g. Australia East). 
 - **Operating system**: The operating system of the server.
