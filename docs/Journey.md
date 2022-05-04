@@ -6,7 +6,7 @@ order: 2
 
 ## Azure Arc-enabled - Kubernetes 
 
-[Part 1: Onboarding (Single Server)]({% post_url 2022-04-29-arc-servers-onboarding%})
+[Part 1: Onboarding (Single Server)]({% post_url 2022-05-03-arc-k8s-onboarding%})
 
 ## Azure Arc-enabled - Servers 
 
