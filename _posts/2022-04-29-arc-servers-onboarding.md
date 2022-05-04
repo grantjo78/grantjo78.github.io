@@ -94,7 +94,7 @@ Copy or download the script. This will be used to deploy and configure the Arc a
 
 In this section I will be deploying the Arc agent onto the target server.
 
-### Step 1: Agent Deployment
+### Step 8: Agent Deployment
 
 On the server where the Arc agent is to be install on, open an Administrator PowerShell session and run the downloaded script. 
 
@@ -130,7 +130,7 @@ Once authication has been completed successfully, the installation will complete
 time="xxxx-xx-xxxxx:xx:xx-xx:xx" level=info msg="Successfully Onboarded Resource to Azure" VM Id=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx"
 ```
 
-### Step 2: Azure Portal
+### Step 9: Azure Portal
 
 Switching back to the Azure Portal, the server that had the Arc agent installed onto should now appear within the Azure Arc Servers blade.
 
