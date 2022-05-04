@@ -4,9 +4,9 @@ title: "Azure Arc-enabled Kubernetes - Part 1: Onboarding"
 categories: [Arc for Kubernetes]
 ---
 
-In this series I'm going to be exploring Azure Arc-enabled Kuberneres.
+In this series I'm going to be exploring Azure Arc-enabled Kubernetes.
 
-[Part 1:]
+[Part 1: Onboarding]{% post_url 2022-05-03-arc-k8s-onboarding%})
 
 This article will cover: 
 1. [What is Azure Arc-enabled Kubernetes?](#what-is-azure-arc-enabled-kubernetes)
@@ -57,7 +57,7 @@ Both virtual machines are running Ubuntu 20.04.4 LTS.
 28 updates can be applied immediately.
 To see these additional updates run: apt list --upgradable
 ```
-### Kubenetes Environment
+### Kubernetes Environment
 
 For the Kubernetes environment, I'm utilising [K3s](https://k3s.io/) because it's very quick to setup and lightweight. If you're interested in how to deploy K3s and configure a cluster you can follow the [quickstart guide](https://rancher.com/docs/k3s/latest/en/quick-start/).
 
