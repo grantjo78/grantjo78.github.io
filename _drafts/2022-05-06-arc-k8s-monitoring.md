@@ -48,103 +48,23 @@ In [Part 1]({% post_url 2022-05-03-arc-k8s-onboarding%}) of this series I covere
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-cluster-overview.jpg)
 
-## Service Account Tokens
+## Monitoring - Insights 
 
-When you select one of the resources under **Kubernetes resources** (e.g. Namespaces), it will prompt you to enter a **Service account bearer token**.
+## Step 1: 
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-namespace-signin.jpg)
+## Step 2:
 
-The steps below will walk through the creatation of a token for Arc to utilise, providing visibility to the clusters resources.
+![](/docs/assets/images/2022-05-06-arc-k8s-monitoring/arc-k8s-monitoring-configuration.jpg)
 
-### Step 1: Create Service Account
+## Step 3: 
 
-In order to obtain a bear token a [Service Account](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#service-account-tokens) needs to be created.
+![](/docs/assets/images/2022-05-06-arc-k8s-monitoring/arc-k8s-monitoring-law.jpg)
 
-Execute the below command to create a service account called **admin-user**.
+## Step 4:
 
-```
-kubectl create serviceaccount admin-user
+![](/docs/assets/images/2022-05-06-arc-k8s-monitoring/arc-k8s-monitoring-onboarding.jpg)
 
-Example:
+## Step 5: 
 
-k3s-admin@k3s-1:~$ kubectl create serviceaccount admin-user
-serviceaccount/admin-user created
-```
+![](/docs/assets/images/2022-05-06-arc-k8s-monitoring/arc-k8s-monitoring-insights-reporting.jpg)
 
-### Step 2: Create Cluster Role Binding
-
-Once the admin-user service account has been created it needs to be bound to a [role](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding).
-
-Execute the below command to bind the admin-user service account to the **cluster-admin** role.
-
-```
-kubectl create clusterrolebinding admin-user-binding --clusterrole cluster-admin --serviceaccount default:admin-user
-
-Example:
-
-k3s-admin@k3s-1:~$ kubectl create clusterrolebinding admin-user-binding --clusterrole cluster-admin --serviceaccount default:admin-user
-clusterrolebinding.rbac.authorization.k8s.io/admin-user-binding created
-```
-
-### Step 3: Extract Secret Name
-
-In this step I'm going to extract the Secret Name from the service account using the below command.
-
-```
-SECRET_NAME=$(kubectl get serviceaccount admin-user -o jsonpath='{$.secrets[0].name}')
-echo $SECRET_NAME
-
-Example:
-k3s-admin@k3s-1:~$ SECRET_NAME=$(kubectl get serviceaccount admin-user -o jsonpath='{$.secrets[0].name}')
-
-k3s-admin@k3s-1:~$ echo $SECRET_NAME
-k3s-admin@k3s-1:~$ admin-user-token-5g99j
-
-```
-
-### Step 4: Obtain Token
-
-To obtain the token to be used, execute the below command.
-
-```
-TOKEN=$(kubectl get secret ${SECRET_NAME} -o jsonpath='{$.data.token}' | base64 -d | sed $'s/$/\\\n/g')
-echo $TOKEN
-
-Example:
-
-k3s-admin@k3s-1:~$ TOKEN=$(kubectl get secret ${SECRET_NAME} -o jsonpath='{$.data.token}' | base64 -d | sed $'s/$/\\\n/g')
-k3s-admin@k3s-1:~$ echo $TOKEN
-```
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-token.jpg)
-
-### Step 5: Paste Token
-
-Switch back to the Azure Portal and paste the token into the **Sign in** box.
-
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-token-paste.jpg)
-
-Select **Sign in**.
-
-### Step 6: Resources
-
-Once the sign in has completed, the resources from the cluster will be visible.
-
-#### Namespaces
-
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-namespace-resources.jpg)
-
-#### Workloads
-
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-workloads.jpg)
-
-#### Service and ingress
-
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-services.jpg)
-
-#### Storage
-
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-storage.jpg)
-
-#### Configuration
-
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-configuration.jpg)

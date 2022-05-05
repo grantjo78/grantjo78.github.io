@@ -166,11 +166,13 @@ In this section I'll be deploying the Arc agent onto the cluster master node usi
 
 ### Step 8: Azure Login
 
-SSH to the master node (e.g. k3s-1) and execute the below command to authienticate to Azure.
+SSH to the master node (e.g. k3s-1) and execute the following command from the script to authienticate to Azure.
 
 ```
 az login
+```
 
+```
 Example:
 
 k3s-admin@k3s-1:~$ az login
@@ -181,11 +183,13 @@ This will prompt you to perform a device login.
 
 ### Step 9: Set Subscription
 
-Once authentication has been completed, the subscription to work in needs to be set. This is achieved with the below command.
+Once authentication has been completed, the subscription to work in needs to be set. This is achieved with the following command copied from the script.
 
 ```
 az account set --subscription <subscription ID>
+```
 
+```
 Example:
 
 k3s-admin@k3s-1:~$ az account set --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx
@@ -193,11 +197,13 @@ k3s-admin@k3s-1:~$ az account set --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxx
 
 ### Step 10: Agent Deployment
 
-To deploy and configure the Arc agent execute the below command.
+To deploy and configure the Arc agent execute the following command copied from the script.
 
 ```
 az connectedk8s connect --name k3s-cluster-01 --resource-group rg-arc-kubernetes-hyperv --location australiaeast --tags Datacenter=Hyperv-01 City=Perth StateOrDistrict=WA CountryOrRegion=Australia --kube-config "/etc/rancher/k3s/k3s.yaml"
+```
 
+```
 Example:
 
 k3s-admin@k3s-1:~$ az connectedk8s connect --name k3s-cluster-01 --resource-group rg-arc-kubernetes-hyperv --location australiaeast --tags Datacenter=Hyperv-01 City=Perth StateOrDistrict=WA CountryOrRegion=Australia --kube-config "/etc/rancher/k3s/k3s.yaml"
