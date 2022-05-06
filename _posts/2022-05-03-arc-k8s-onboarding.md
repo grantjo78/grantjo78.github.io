@@ -200,6 +200,12 @@ k3s-admin@k3s-1:~$ az account set --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxx
 To deploy and configure the Arc agent execute the command in the script under **Create connected cluster**.
 
 ```
+az connectedk8s connect --name <cluster name> --resource-group <resource group name> --location <Azure region> --tags Datacenter=<datacenter name> City=<city> StateOrDistrict=<state> CountryOrRegion=<country>
+```
+
+```
+Example:
+
 az connectedk8s connect --name k3s-cluster-01 --resource-group rg-arc-kubernetes-hyperv --location australiaeast --tags Datacenter=Hyperv-01 City=Perth StateOrDistrict=WA CountryOrRegion=Australia --kube-config "/etc/rancher/k3s/k3s.yaml"
 ```
 
@@ -272,7 +278,7 @@ An overview of the cluster that was onboarded should be visible.
 
 ### Step 12: Kubernetes clusters
 
-Switching back to the Azure Arc - Infrastructure view, the new cluster can be access from here.
+Switching back to the **Azure Arc - Infrastructure** view, the new cluster is also visible from here.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-onboard-newcluster.jpg)
 
