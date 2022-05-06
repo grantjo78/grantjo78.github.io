@@ -162,11 +162,11 @@ Copy/download the script.
 
 ## Arc-enabled Kubernetes - Agent Deployment
 
-In this section I'll be deploying the Arc agent onto the cluster master node using the script that was copied/downloaded.
+In this section I'll be deploying the Arc agent onto the master node using the script that was copied/downloaded.
 
-### Step 8: Azure Login
+### Step 8: Log into Azure
 
-SSH to the master node (e.g. k3s-1) and execute the following command from the script to authienticate to Azure.
+SSH to the master node (e.g. k3s-1) and execute the command in the script under **Log into Azure***. 
 
 ```
 az login
@@ -181,9 +181,9 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
 
 This will prompt you to perform a device login.
 
-### Step 9: Set Subscription
+### Step 9: Set Azure subscription
 
-Once authentication has been completed, the subscription to work in needs to be set. This is achieved with the following command copied from the script.
+Execute the command in the script under **Set Azure Subscription**. 
 
 ```
 az account set --subscription <subscription ID>
@@ -195,13 +195,16 @@ Example:
 k3s-admin@k3s-1:~$ az account set --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx
 ```
 
-### Step 10: Agent Deployment
+### Step 10: Create connected cluster
 
-To deploy and configure the Arc agent execute the following command copied from the script.
+To deploy and configure the Arc agent execute the command in the script under **Create connected cluster**.
 
 ```
 az connectedk8s connect --name k3s-cluster-01 --resource-group rg-arc-kubernetes-hyperv --location australiaeast --tags Datacenter=Hyperv-01 City=Perth StateOrDistrict=WA CountryOrRegion=Australia --kube-config "/etc/rancher/k3s/k3s.yaml"
 ```
+
+I've used an additional parameter that wasn't included in the script:
+- **--kube-config**: Path to the kube config file. With K3s the kube config file is not stored with the user profile, which the agent deployment looks for.
 
 ```
 Example:
@@ -250,10 +253,6 @@ Failed to validate if the active namespace exists on the kubernetes cluster. Exc
   "type": "microsoft.kubernetes/connectedclusters"
 }
 ```
-
-I've used an additional parameter that wasn't included in the script:
-- **--kube-config**: Path to the kube config file. With K3s the kube config file is not stored with the user profile, which the agent deployment looks for.
-
 ### Step 9: Run script
 
 Switch back to the Azure Portal and select **Next: Verification >**.
