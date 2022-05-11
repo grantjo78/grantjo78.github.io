@@ -32,7 +32,6 @@ linkedin_username: johangrant
 
 # Build settings
 theme: minima
-skin: dark  
 plugins:
   - jekyll-feed
   - jekyll-sitemap
