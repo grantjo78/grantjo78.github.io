@@ -37,9 +37,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
- 
-
 show_excerpts: true # set to false to remove excerpts on the homepage
+
+minima:
+  date_format: "%b %-d, %Y"
+  skin: dark
 
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
