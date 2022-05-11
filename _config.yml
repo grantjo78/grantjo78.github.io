@@ -35,7 +35,7 @@ minima:
     github:  grantjo78
     linkedin: johangrant
   date_format: "%b %-d, %Y"
-  skin: dark  
+  skin: solarized 
 
 # Build settings
 theme: minima
