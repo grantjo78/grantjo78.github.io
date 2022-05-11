@@ -21,7 +21,7 @@ To simulate a server that is outside of Azure, I'm going to leverage nested virt
 
 ### Virtual Machines
 
-Within the Hyper-V host, I've deployed a two virtual machines:
+Within the Hyper-V host, I've deployed two virtual machines:
 - k3s-1
 - k3s-2
 
