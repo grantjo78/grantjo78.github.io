@@ -3,7 +3,7 @@ layout: post
 title: "Azure Arc-enabled Kubernetes - Part 2: Cluster Resources"
 categories: [Arc for Kubernetes]
 ---
-This article will explore Kubernetes resources for an Arc-enabled cluster.
+Today I will be exploring Kubernetes resources for an Arc-enabled cluster.
 
 This article will cover: 
 1. [The Environment](#the-environment)
@@ -88,17 +88,13 @@ clusterrolebinding.rbac.authorization.k8s.io/admin-user-binding created
 
 ### Step 3: Extract Secret Name
 
-In this step I'm going to extract the Secret Name from the service account using the below command.
+In this step I'm going to extract the Secret Name from the service account using the following command. 
 
 ```
 SECRET_NAME=$(kubectl get serviceaccount admin-user -o jsonpath='{$.secrets[0].name}')
-echo $SECRET_NAME
 
 Example:
 k3s-admin@k3s-1:~$ SECRET_NAME=$(kubectl get serviceaccount admin-user -o jsonpath='{$.secrets[0].name}')
-
-k3s-admin@k3s-1:~$ echo $SECRET_NAME
-k3s-admin@k3s-1:~$ admin-user-token-5g99j
 
 ```
 
