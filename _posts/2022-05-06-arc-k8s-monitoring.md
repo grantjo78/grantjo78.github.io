@@ -212,7 +212,7 @@ Insights will now be configured for the environment.
 
 ![](/docs/assets/images/2022-05-06-arc-k8s-monitoring/arc-k8s-monitoring-onboarding.jpg)
 
-Once it has completed being onboarded, performance information on the environment will now be visible. 
+Once the onboarding has completed, performance information on the environment will be visible. 
 
 ![](/docs/assets/images/2022-05-06-arc-k8s-monitoring/arc-k8s-monitoring-insights-reporting.jpg)
 
