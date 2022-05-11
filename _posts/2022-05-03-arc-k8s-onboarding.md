@@ -10,7 +10,7 @@ In this series I'm going to be exploring Azure Arc-enabled Kubernetes.
 
 [Part 2: Cluster Resources]({% post_url 2022-05-04-arc-k8s-resources%})
 
-[Part 3: Monitoring - Coming Soon]
+[Part 3: Monitoring]{% post_url 2022-05-04-arc-k8s-monitoring%})
 
 [Part 4: GitOps - Coming Soon]
 
