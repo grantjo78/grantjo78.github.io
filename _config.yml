@@ -17,10 +17,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+title: "Johan's Cloud Blog"
 
 author:
-  title: "Johan's Cloud Blog"
-  email: Johan Grant
+  name: "Johan Grant"
+  email: mail@johangrant.com
 # description: >- # this means to ignore newlines until "baseurl:"
 #  Write an awesome description for your new site here. You can edit this
 #  line in _config.yml. It will appear in your document head meta (for
@@ -31,8 +32,10 @@ url: "https://blog.johangrant.cloud" # the base hostname & protocol for your sit
 
 minima:
   social_links:
-    github_username:  grantjo78
-    linkedin_username: johangrant
+    github:  grantjo78
+    linkedin: johangrant
+  date_format: "%b %-d, %Y"
+  skin: dark  
 
 # Build settings
 theme: minima
@@ -45,10 +48,6 @@ plugins:
 remote_theme: jekyll/minima
 
 show_excerpts: true # set to false to remove excerpts on the homepage
-
-minima:
-  date_format: "%b %-d, %Y"
-  skin: dark
 
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
