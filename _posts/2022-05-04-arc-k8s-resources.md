@@ -17,7 +17,7 @@ Before I get started, I wanted to describe the environment that I will be workin
 
 To simulate a server that is outside of Azure, I'm going to leverage nested virtualisation within an Azure virtual machine by enabling the Hyper-V role. If you would like to know how I did this, you can review my previous post [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%}).
 
-![](/docs/assets/images/2022-05-0-arc-k8s-onboarding/arc-hyperv-host.jpg)
+![](/docs/assets/images/2022-05-04-arc-k8s-onboarding/arc-hyperv-host.jpg)
 
 ### Virtual Machines
 
