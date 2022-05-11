@@ -33,9 +33,11 @@ url: "https://blog.johangrant.cloud" # the base hostname & protocol for your sit
 minima:
   social_links:
     github:  grantjo78
-    linkedin: johangrant
+    linkedin_username: johangrant
   date_format: "%b %-d, %Y"
   skin: dark  
+
+linkedin_username: johangrant
 
 # Build settings
 theme: minima
