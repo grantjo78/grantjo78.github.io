@@ -32,13 +32,13 @@ linkedin_username: johangrant
 
 # Build settings
 theme: minima
+skin: dark  
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
 
-minima:
-  skin: dark  
+ 
 
 show_excerpts: true # set to false to remove excerpts on the homepage
 
