@@ -79,11 +79,12 @@ k3s-2   Ready    <none>                 22h   v1.22.7+k3s1
 
 ### Sample Voting Application
 
-I've also deploy the below Voting appliaction into the environment.
+I've deployed the below sample appliaction into the **Azure** namespace.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-votingapp.jpg)
 
 Below is the [sample yaml code](https://docs.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-cli#deploy-the-application) for the application (with some slight modifications for K3s)
+
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -173,7 +174,7 @@ spec:
     app: azure-vote-front
 ```
 
-The below shows the resources running in the K3s environment.
+The below illustrates the sample application resources running within the K3s environment.
 
 ```
 k3s-admin@k3s-1:~$ sudo kubectl get all  -n voting -o wide
