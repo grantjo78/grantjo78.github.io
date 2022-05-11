@@ -27,15 +27,19 @@ This article will cover:
 
 ## The Environment
 
-Before I get started, I wanted to describe the environment that I will be working with.
+The environment that I will be working with is described below:
+1. [Hyper-V Host](#the-hyper-v-host)
+2. [Virtual Machines](#hyper-v-virtual-machines)
+3. [Kubernetes Environment](#kubernetes-environment)
+4. [Sample Voting Application](#sample-voting-application)
 
-### The Hyper-V Host
+### Hyper-V Host
 
 To simulate a server that is outside of Azure, I'm going to leverage nested virtualisation within an Azure virtual machine by enabling the Hyper-V role. If you would like to know how I did this, you can review my previous post [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%}).
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-hyperv-host.jpg)
 
-### Virtual Machines
+### Hyper-V Virtual Machines
 
 Within the Hyper-V host, I've deployed two virtual machines:
 - k3s-1
