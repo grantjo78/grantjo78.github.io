@@ -36,6 +36,9 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-remote-theme
+
+remote_theme: jekyll/minima
 
 show_excerpts: true # set to false to remove excerpts on the homepage
 
