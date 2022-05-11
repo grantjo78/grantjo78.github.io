@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Azure Arc-enabled Kubernetes - Part 2: Monitoring"
+title: "Azure Arc-enabled Kubernetes - Part 3: Monitoring"
 categories: [Arc for Kubernetes]
 ---
-Out of the box, the monitoring of an Arc-enabled Kubernetes environment is limited. To get rich monitoring of the environment **[Container Insights]**(https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-overview) needs to be configured, which I will be doing today. 
+Out of the box, the monitoring of an Arc-enabled Kubernetes environment is limited. To get rich monitoring of the environment [**Container Insights**](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-overview) needs to be configured, which I will be doing today. 
 
 This article will cover: 
 1. [The Environment](#the-environment)
@@ -27,7 +27,6 @@ Within the Hyper-V host, I've deployed two virtual machines:
 - k3s-2
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-onboarding/arc-hyperv-guest-k3s.jpg)
-
 
 ### Kubernetes Environment
 
@@ -71,7 +70,7 @@ Insights needs to be configured. Select **Configure azure monitor**.
 
 ### Step 3: Configure Azure Monitor
 
-Select the **Log Analytics Workspace** that was created as part of the [Prerequisites](#prerequisites) and select configure.
+Select the **Log Analytics Workspace** that was created as part of the [Prerequisites](#prerequisites) and select **Configure**.
 
 ![](/docs/assets/images/2022-05-06-arc-k8s-monitoring/arc-k8s-monitoring-law.jpg)
 
