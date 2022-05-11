@@ -29,7 +29,7 @@ This article will cover:
 
 The environment that I will be working with is described below:
 1. [Hyper-V Host](#hyper-v-host)
-2. [Virtual Machines](#hyper-v-virtual-machines)
+2. [Hyper-V Guests](#hyper-v-guests)
 3. [Kubernetes Environment](#kubernetes-environment)
 4. [Sample Voting Application](#sample-voting-application)
 
@@ -39,7 +39,7 @@ To simulate a server that is outside of Azure, I'm going to leverage nested virt
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-hyperv-host.jpg)
 
-### Hyper-V Virtual Machines
+### Hyper-V Guests
 
 Within the Hyper-V host, I've deployed two virtual machines:
 - k3s-1
