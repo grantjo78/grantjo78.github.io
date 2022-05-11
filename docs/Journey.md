@@ -10,7 +10,7 @@ order: 2
 
 [Part 2: Cluster Resources]({% post_url 2022-05-04-arc-k8s-resources%})
 
-[Part 3: Monitoring]
+[Part 3: Monitoring]({% post_url 2022-05-06-arc-k8s-monitoring%})
 
 ## Azure Arc-enabled - Servers 
 
