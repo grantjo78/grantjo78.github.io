@@ -12,7 +12,7 @@ This article will cover:
 ## The Environment
 
 The environment that I will be working with is described below:
-1. [Hyper-V Host](#the-hyper-v-host)
+1. [Hyper-V Host](#hyper-v-host)
 2. [Hyper-V Virtual Machines](#hyper-v-virtual-machines)
 3. [Kubernetes Environment](#kubernetes-environment)
 4. [Sample Voting Application](#sample-voting-application)
