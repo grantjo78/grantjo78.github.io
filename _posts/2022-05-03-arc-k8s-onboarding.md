@@ -16,14 +16,14 @@ In this series I'm going to be exploring Azure Arc-enabled Kubernetes.
 
 This article will cover: 
 - [What is Azure Arc-enabled Kubernetes?](#what-is-azure-arc-enabled-kubernetes)
-- [The Environment](#the-environment)
+- [The Demo Environment](#the-demo-environment)
 - [Prerequisites](#prerequisites)
 - [Arc-enabled Kubernetes - Azure Configuration](#arc-enabled-kubernetes---azure-configuration)
 - [Arc-enabled Kubernetes - Agent Deployment](#arc-enabled-kubernetes---agent-deployment)
 ## What is Azure Arc-enabled Kubernetes?
 
 [Azure Arc-enabled Kubernetes allows you to attach and configure Kubernetes clusters running anywhere. You can connect your clusters running on other public cloud providers (such as GCP or AWS) or clusters running on your on-premise data center (such as VMware vSphere or Azure Stack HCI) to Azure Arc.](https://docs.microsoft.com/en-us/azure/azure-arc/kubernetes/overview)
-## The Environment
+## The Demo Environment
 
 The environment that I will be working with is described below:
 - [Hyper-V Host](#hyper-v-host)
