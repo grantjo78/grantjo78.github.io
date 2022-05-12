@@ -3,11 +3,11 @@ layout: post
 title: "Azure Arc-enabled Kubernetes - Part 2: Cluster Resources"
 categories: [Arc for Kubernetes]
 ---
-Today I will be exploring Kubernetes resources for an Arc-enabled cluster.
+Today I will be exploring being able to view Kubernetes resources for an Arc-enabled cluster.
 
 This article will cover: 
 1. [The Environment](#the-environment)
-2. [Service Account Tokens](#service-account-tokens)
+2. [Kubernetes Resources](#kubernetes-resources)
 
 ## The Environment
 
@@ -179,23 +179,24 @@ In [Part 1]({% post_url 2022-05-03-arc-k8s-onboarding%}) of this series I covere
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-cluster-overview.jpg)
 
-## Service Account Tokens
+## Kubernetes Resources
 
-When you select one of the resources under **Kubernetes resources** (e.g. Namespaces), it will prompt you to enter a **Service account bearer token**.
+When you select one of the resources under **Kubernetes resources** (e.g. Namespaces), it will prompt you to enter a **Service account bearer token**. This token will be used by Arc to gain access to the cluster.
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-namespace-signin.jpg)
 
-The steps below will walk through the creatation of a token for Arc to utilise, providing visibility to the clusters resources.
+The following steps will walk through the process of creatating a token for Arc to utilise, providing visibility to the clusters resources.
 
 ### Step 1: Create Service Account
 
-In order to obtain a bear token a [Service Account](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#service-account-tokens) needs to be created.
+In order to obtain a bearer token, a [Service Account](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#service-account-tokens) needs to be created.
 
-Execute the below command to create a service account called **admin-user**.
+The following command is used to create a service account called **admin-user**.
 
 ```
-kubectl create serviceaccount admin-user
-
+kubectl create serviceaccount <service account name>
+```
+```
 Example:
 
 k3s-admin@k3s-1:~$ kubectl create serviceaccount admin-user
@@ -206,11 +207,12 @@ serviceaccount/admin-user created
 
 Once the admin-user service account has been created it needs to be bound to a [role](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding).
 
-Execute the below command to bind the admin-user service account to the **cluster-admin** role.
+The following command is used to bind the admin-user service account to the **cluster-admin** role.
 
 ```
-kubectl create clusterrolebinding admin-user-binding --clusterrole cluster-admin --serviceaccount default:admin-user
-
+kubectl create clusterrolebinding <role binding name> --clusterrole <cluster role to assign> --serviceaccount default:<service account name>
+```
+```
 Example:
 
 k3s-admin@k3s-1:~$ kubectl create clusterrolebinding admin-user-binding --clusterrole cluster-admin --serviceaccount default:admin-user
@@ -223,26 +225,28 @@ In this step I'm going to extract the Secret Name from the service account using
 
 ```
 SECRET_NAME=$(kubectl get serviceaccount admin-user -o jsonpath='{$.secrets[0].name}')
-
+```
+```
 Example:
 k3s-admin@k3s-1:~$ SECRET_NAME=$(kubectl get serviceaccount admin-user -o jsonpath='{$.secrets[0].name}')
-
 ```
 
 ### Step 4: Obtain Token
 
-To obtain the token to be used, execute the below command.
+To obtain the token to be used, the following command will be used.
 
 ```
 TOKEN=$(kubectl get secret ${SECRET_NAME} -o jsonpath='{$.data.token}' | base64 -d | sed $'s/$/\\\n/g')
-echo $TOKEN
-
+```
+```
 Example:
 
 k3s-admin@k3s-1:~$ TOKEN=$(kubectl get secret ${SECRET_NAME} -o jsonpath='{$.data.token}' | base64 -d | sed $'s/$/\\\n/g')
 k3s-admin@k3s-1:~$ echo $TOKEN
 ```
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-token.jpg)
+
+Copy the token.
 
 ### Step 5: Paste Token
 
@@ -258,15 +262,38 @@ Once the sign in has completed, the resources from the cluster will be visible.
 
 #### Namespaces
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-namespace-resources.jpg)
+All the namespaces that exist within the cluster will be visible. The [sample application](#sample-voting-application) namespace, **voting**, is highlighted.
+
+![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-namespace-voting.jpg)
 
 #### Workloads
 
+##### Deployments
+
+Selecting **Workloads** will bring up all the **Deployments** within the cluster.
+
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-workloads.jpg)
+
+The namespace filter has be used to filter deployments within the voting namespace. 
+
+![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-deployments-voting.jpg)
+
+##### Pods
+
+Selecting **Pods** 
+
+![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-pods-voting.jpg)
+
+##### Replica Sets
+
+![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-replicasets-voting.jpg)
+
 
 #### Service and ingress
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-services.jpg)
+
+![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-service-voting.jpg)
 
 #### Storage
 
@@ -275,3 +302,7 @@ Once the sign in has completed, the resources from the cluster will be visible.
 #### Configuration
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-configuration.jpg)
+
+![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-config-configmaps.jpg)
+
+![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-config-secrets.jpg)
