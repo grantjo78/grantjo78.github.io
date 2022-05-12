@@ -7,7 +7,7 @@ Today I will be exploring being able to view Kubernetes resources for an Arc-ena
 
 This article contains the following sections: 
 - [The Demo Environment](#the-demo-environment)
-- [Kubernetes Resources](#kubernetes-resources)
+- [Viewing Kubernetes Resources](#viewing-kubernetes-resources)
 
 ## The Demo Environment
 
@@ -179,7 +179,7 @@ In [Part 1]({% post_url 2022-05-03-arc-k8s-onboarding%}) of this series I covere
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-cluster-overview.jpg)
 
-## Kubernetes Resources
+## Viewing Kubernetes Resources
 
 When you select one of the resources under **Kubernetes resources** (e.g. Namespaces) for the first time you will be prompted to enter a **Service account bearer token**. This token will be used by Arc to gain access to the cluster.
 
