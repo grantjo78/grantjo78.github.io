@@ -6,10 +6,10 @@ categories: [Arc for Kubernetes]
 Today I will be exploring being able to view Kubernetes resources for an Arc-enabled cluster.
 
 This article contains the following sections: 
-- [The Environment](#the-environment)
+- [The Demo Environment](#the-demo-environment)
 - [Kubernetes Resources](#kubernetes-resources)
 
-## The Environment
+## The Demo Environment
 
 The environment that I will be working with is described below:
 - [Hyper-V Host](#hyper-v-host)
