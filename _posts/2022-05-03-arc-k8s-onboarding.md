@@ -20,11 +20,9 @@ This article will cover:
 - [Prerequisites](#prerequisites)
 - [Arc-enabled Kubernetes - Azure Configuration](#arc-enabled-kubernetes---azure-configuration)
 - [Arc-enabled Kubernetes - Agent Deployment](#arc-enabled-kubernetes---agent-deployment)
-
 ## What is Azure Arc-enabled Kubernetes?
 
 [Azure Arc-enabled Kubernetes allows you to attach and configure Kubernetes clusters running anywhere. You can connect your clusters running on other public cloud providers (such as GCP or AWS) or clusters running on your on-premise data center (such as VMware vSphere or Azure Stack HCI) to Azure Arc.](https://docs.microsoft.com/en-us/azure/azure-arc/kubernetes/overview)
-
 ## The Environment
 
 The environment that I will be working with is described below:
@@ -32,13 +30,11 @@ The environment that I will be working with is described below:
 - [Hyper-V Guests](#hyper-v-guests)
 - [Kubernetes Environment](#kubernetes-environment)
 - [Sample Voting Application](#sample-voting-application)
-
 ### Hyper-V Host
 
 To simulate a server that is outside of Azure, I'm going to leverage nested virtualisation within an Azure virtual machine by enabling the Hyper-V role. If you would like to know how I did this, you can review my previous post [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%}).
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-hyperv-host.jpg)
-
 ### Hyper-V Guests
 
 Within the Hyper-V host, I've deployed two virtual machines:
@@ -80,7 +76,6 @@ NAME    STATUS   ROLES                  AGE   VERSION
 k3s-1   Ready    control-plane,master   22h   v1.22.7+k3s1
 k3s-2   Ready    <none>                 22h   v1.22.7+k3s1
 ```
-
 ### Sample Voting Application
 
 I've deployed the below sample appliaction into the **Azure** namespace.
@@ -206,9 +201,7 @@ replicaset.apps/azure-vote-front-5f4d7db9c8   2         2         2       41m   
 replicaset.apps/azure-vote-back-59cb7dc555    2         2         2       41m   azure-vote-back    mcr.microsoft.com/oss/bitnami/redis:6.0.8         app=azure-vote-back,pod-template-hash=59cb7dc555
 
 ```
-
 ## Prerequisites
-
 ### Azure Resource Providers
 
 The following resource providers need to be enabled within the subscription that Arc-enabled Kubernetes will be deployed to:
@@ -233,10 +226,7 @@ az provider show -n Microsoft.ExtendedLocation -o table
 ```
 
 ### Kubernetes Node
-
 For the master node, the [Azure Cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt) needs to be installed.
-
-
 ## Arc-enabled Kubernetes - Azure Configuration
 
 To enable a Kubernetes cluster for Azure Arc, I'm going to walk through the steps via the Azure Portal:
@@ -247,31 +237,26 @@ To enable a Kubernetes cluster for Azure Arc, I'm going to walk through the step
 - [Step 5: Cluster details](#step-5-cluster-details)
 - [Step 6: Tags](#step-6-tags)
 - [Step 7: Run script](#step-7-run-script)
-
 ### Step 1: Azure Arc Service
 
 From the Azure Portal select the **Azure Arc** service.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-service.jpg)
-
 ### Step 2: Azure Arc Overview
 
 Under the **Infrastructure** section, select **Kubernetes clusters**.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-overview.jpg)
-
 ### Step 3: Kubernetes clusters
 
 Select **Add a Kubernetes cluster with Azure Arc**.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-add-cluster.jpg)
-
 ### Step 4: Prerequisites
 
 Select **Next: Cluster details > **
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-prerequisites.jpg)
-
 ### Step 5: Cluster details
 
 Populate the below fields. 
@@ -284,19 +269,16 @@ Populate the below fields.
  Select **Next: Tags**.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-cluster-details.jpg)
-
 ### Step 6: Tags
 
 Populate the fields with data that will be useful and select **Next: Run script**
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-tags.jpg)
-
 ### Step 7: Run script
 
 Copy/download the script.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-arc-run-script-stop.jpg)
-
 ## Arc-enabled Kubernetes - Agent Deployment
 
 In this section I'll be deploying the Arc agent onto the master node using the script that was copied/downloaded.
@@ -308,8 +290,6 @@ In this section I'll be deploying the Arc agent onto the master node using the s
 - [Step 5: Deployment Verification](#step-5-deployment-verification)
 - [Step 6: Cluster overview](#step-6-cluster-overview)
 - [Step 7: Kubernetes clusters](#step-7-kubernetes-clusters)
-
-
 ### Step 1: Log into Azure
 
 SSH to the master node (e.g. k3s-1) and execute the command in the script under **Log into Azure***. 
@@ -326,7 +306,6 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
 ```
 
 This will prompt you to perform a device login.
-
 ### Step 2: Set Azure subscription
 
 Execute the command in the script under **Set Azure Subscription**. 
@@ -340,7 +319,6 @@ Example:
 
 k3s-admin@k3s-1:~$ az account set --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx
 ```
-
 ### Step 3 Create connected cluster
 
 To deploy and configure the Arc agent execute the command in the script under **Create connected cluster**.
@@ -410,18 +388,16 @@ Failed to validate if the active namespace exists on the kubernetes cluster. Exc
 Switch back to the Azure Portal and select **Next: Verification >**.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-run-script.jpg)
-
 ### Step 5: Deployment Verification
 
 The Kubernetes cluster should show as successfully connected to Azure. Select **Go to the cluster**.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-validation.jpg)
-
 ### Step 6: Cluster overview
+
 An overview of the cluster that was onboarded should be visible.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-arc-cluster.jpg)
-
 ### Step 7: Kubernetes clusters
 
 Switching back to the **Azure Arc - Infrastructure** view, the new cluster is also visible from here.
