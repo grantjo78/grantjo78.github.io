@@ -12,7 +12,7 @@ In this series I'm going to be exploring Azure Arc-enabled Kubernetes.
 
 [Part 3: Monitoring]({% post_url 2022-05-06-arc-k8s-monitoring%})
 
-[Part 4: GitOps - Coming Soon]
+*Part 4: GitOps - Coming Soon*
 
 This article will cover: 
 - [What is Azure Arc-enabled Kubernetes?](#what-is-azure-arc-enabled-kubernetes)
