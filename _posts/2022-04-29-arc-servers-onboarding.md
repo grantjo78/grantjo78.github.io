@@ -9,10 +9,10 @@ In this series I'm going to be exploring Azure Arc-enabled servers.
 [Part 1: Onboarding (Single Server)]({% post_url 2022-04-29-arc-servers-onboarding%})
 
 This article will cover: 
-1. [What is Azure Arc-enabled Servers?](#what-is-azure-arc-enabled-servers)
-2. [The Environment](#the-environment)
-3. [Arc-enabled Servers - Azure Configuration](#arc-enabled-servers---azure-configuration)
-4. [Arc-enabled Servers - Agent Deployment](#arc-enabled-servers---agent-deployment)
+- [What is Azure Arc-enabled Servers?](#what-is-azure-arc-enabled-servers)
+- [The Environment](#the-environment)
+- [Arc-enabled Servers - Azure Configuration](#arc-enabled-servers---azure-configuration)
+- [Arc-enabled Servers - Agent Deployment](#arc-enabled-servers---agent-deployment)
 
 ## What is Azure Arc-enabled Servers?
 

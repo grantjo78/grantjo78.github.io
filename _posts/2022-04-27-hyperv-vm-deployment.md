@@ -13,8 +13,8 @@ In this series I'm going to be exploring **Nested Virtualisation** on Azure.
 [Part 3: Networking - NAT]({% post_url 2022-04-29-hyperv-networking%})
 
 This article will cover: 
-1. [Nested Virtualisation Support](#nested-virtualisation-support)
-2. [Hyper-V Host Virtual Machine Deployment](#hyper-v-host-virtual-machine-deployment)
+- [Nested Virtualisation Support](#nested-virtualisation-support)
+- [Hyper-V Host Virtual Machine Deployment](#hyper-v-host-virtual-machine-deployment)
 
 ## Nested Virtualisation Support
 Before enabling Hyper-V on a virtual machine, you need to ensure that it supports **nested virtualisation** (not all virtual machine series support nested virtualisation). If you enable the Hyper-V role on a virtual machine that does not support nested virtualisation, you may see an error similar to the one below.
