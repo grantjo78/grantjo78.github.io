@@ -5,7 +5,7 @@ categories: [Arc for Kubernetes]
 ---
 Today I will be exploring being able to view Kubernetes resources for an Arc-enabled cluster.
 
-This article will cover: 
+This article contains the following sections: 
 1. [The Environment](#the-environment)
 2. [Kubernetes Resources](#kubernetes-resources)
 
@@ -144,7 +144,7 @@ spec:
     app: azure-vote-front
 ```
 
-The below illustrates the sample application resources running within the K3s environment.
+The following illustrates the applications resources running within the K3s environment.
 
 ```
 k3s-admin@k3s-1:~$ sudo kubectl get all  -n voting -o wide
@@ -181,7 +181,7 @@ In [Part 1]({% post_url 2022-05-03-arc-k8s-onboarding%}) of this series I covere
 
 ## Kubernetes Resources
 
-When you select one of the resources under **Kubernetes resources** (e.g. Namespaces), it will prompt you to enter a **Service account bearer token**. This token will be used by Arc to gain access to the cluster.
+When you select one of the resources under **Kubernetes resources** (e.g. Namespaces) for the first time you will be prompted to enter a **Service account bearer token**. This token will be used by Arc to gain access to the cluster.
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-namespace-signin.jpg)
 
@@ -205,7 +205,7 @@ serviceaccount/admin-user created
 
 ### Step 2: Create Cluster Role Binding
 
-Once the admin-user service account has been created it needs to be bound to a [role](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding).
+Once the admin-user service account has been created it needs to be [bound to a role](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding).
 
 The following command is used to bind the admin-user service account to the **cluster-admin** role.
 
@@ -221,7 +221,7 @@ clusterrolebinding.rbac.authorization.k8s.io/admin-user-binding created
 
 ### Step 3: Extract Secret Name
 
-In this step I'm going to extract the Secret Name from the service account using the following command. 
+In this step I'm going to extract the **Secret Name** from the service account using the following command. 
 
 ```
 SECRET_NAME=$(kubectl get serviceaccount admin-user -o jsonpath='{$.secrets[0].name}')
@@ -280,18 +280,24 @@ The namespace filter has be used to filter deployments within the voting namespa
 
 ##### Pods
 
-Selecting **Pods** 
+Selecting **Pods** will display all the pods in the cluster. Filtering the view by the voting namespace will display the pods that make up the voting application.
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-pods-voting.jpg)
 
 ##### Replica Sets
 
+Selecting **Replica sets** will display all the replica sets in the cluster. Filtering the view by the voting namespace will display the replica sets that make up the voting application.
+
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-replicasets-voting.jpg)
 
 
-#### Service and ingress
+#### Service and ingresses
+
+Selecting the **Services and ingresses** resource will display all services in the cluster.
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-services.jpg)
+
+Filtering the view by the voting namespace will display the services that make up the voting application.
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-service-voting.jpg)
 
@@ -301,8 +307,18 @@ Selecting **Pods**
 
 #### Configuration
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-configuration.jpg)
+##### Config maps
+
+Selecting the **Configuration** resource will display all the config maps in the cluster.
+
+Filtering the view by the voting namespace will display the config maps that make up the voting application.
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-config-configmaps.jpg)
+
+##### Secrets
+
+Selecting **Secrets** will display all the secrets in the cluster.
+
+Filtering the view by the voting namespace will display the secrets that make up the voting application.
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-config-secrets.jpg)
