@@ -272,9 +272,7 @@ All the namespaces that exist within the cluster will be visible. The [sample ap
 
 Selecting **Workloads** will bring up all the **Deployments** within the cluster.
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-workloads.jpg)
-
-The namespace filter has be used to filter deployments within the voting namespace. 
+Filtering the view by the voting namespace will display the deploymets for the voting applications. 
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-deployments-voting.jpg)
 
@@ -295,15 +293,9 @@ Selecting **Replica sets** will display all the replica sets in the cluster. Fil
 
 Selecting the **Services and ingresses** resource will display all services in the cluster.
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-services.jpg)
-
 Filtering the view by the voting namespace will display the services that make up the voting application.
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-service-voting.jpg)
-
-#### Storage
-
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-storage.jpg)
 
 #### Configuration
 
