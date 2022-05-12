@@ -194,6 +194,8 @@ Container insights is a feature to monitor the performance of container workload
 
 Under **Monitoring**, select **Insights**.
 
+![](/docs/assets/images/2022-05-06-arc-k8s-monitoring/arc-k8s-monitoring-overview.jpg)
+
 ### Step 2: Insights
 
 Insights needs to be configured. Select **Configure azure monitor**.

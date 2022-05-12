@@ -185,7 +185,14 @@ When you select one of the resources under **Kubernetes resources** (e.g. Namesp
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-namespace-signin.jpg)
 
-The following steps will walk through the process of creatating a token for Arc to utilise, providing visibility to the clusters resources.
+The following steps will walk through the process of creatating a token for Arc to utilise, providing visibility to the clusters resources:
+- [Step 1: Create Service Account](#step-1-create-service-account)
+- [Step 2: Create Cluster Role Binding](#step-2-create-cluster-role-binding)
+- [Step 3: Extract Secret Name](#step-3-extract-secret-name)
+- [Step 4: Obtain Token](#step-4-obtain-token)
+- [Step 5: Paste Token](#step-5-paste-token)
+- [Step 6: Resources](#step-6-resources)
+
 
 ### Step 1: Create Service Account
 
