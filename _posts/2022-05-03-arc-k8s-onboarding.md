@@ -15,11 +15,11 @@ In this series I'm going to be exploring Azure Arc-enabled Kubernetes.
 [Part 4: GitOps - Coming Soon]
 
 This article will cover: 
-1. [What is Azure Arc-enabled Kubernetes?](#what-is-azure-arc-enabled-kubernetes)
-2. [The Environment](#the-environment)
-3. [Prerequisites](#prerequisites)
-4. [Arc-enabled Kubernetes - Azure Configuration](#arc-enabled-kubernetes---azure-configuration)
-5. [Arc-enabled Kubernetes - Agent Deployment](#arc-enabled-kubernetes---agent-deployment)
+- [What is Azure Arc-enabled Kubernetes?](#what-is-azure-arc-enabled-kubernetes)
+- [The Environment](#the-environment)
+- [Prerequisites](#prerequisites)
+- [Arc-enabled Kubernetes - Azure Configuration](#arc-enabled-kubernetes---azure-configuration)
+- [Arc-enabled Kubernetes - Agent Deployment](#arc-enabled-kubernetes---agent-deployment)
 
 ## What is Azure Arc-enabled Kubernetes?
 
@@ -28,10 +28,10 @@ This article will cover:
 ## The Environment
 
 The environment that I will be working with is described below:
-1. [Hyper-V Host](#hyper-v-host)
-2. [Hyper-V Guests](#hyper-v-guests)
-3. [Kubernetes Environment](#kubernetes-environment)
-4. [Sample Voting Application](#sample-voting-application)
+- [Hyper-V Host](#hyper-v-host)
+- [Hyper-V Guests](#hyper-v-guests)
+- [Kubernetes Environment](#kubernetes-environment)
+- [Sample Voting Application](#sample-voting-application)
 
 ### Hyper-V Host
 
@@ -239,7 +239,14 @@ For the master node, the [Azure Cli](https://docs.microsoft.com/en-us/cli/azure/
 
 ## Arc-enabled Kubernetes - Azure Configuration
 
-To enable a Kubernetes cluster for Azure Arc, I'm going to walk through the steps via the Azure Portal.
+To enable a Kubernetes cluster for Azure Arc, I'm going to walk through the steps via the Azure Portal:
+- [Step 1: Azure Arc Service](#step-1-azure-arc-service)
+- [Step 2: Azure Arc Overview](#step-2-azure-arc-overview)
+- [Step 3: Kubernetes clusters](#step-3-kubernetes-clusters)
+- [Step 4: Prerequisites](#step-4-prerequisites)
+- [Step 5: Cluster details](#step-5-cluster-details)
+- [Step 6: Tags](#step-6-tags)
+- [Step 7: Run script](#step-7-run-script)
 
 ### Step 1: Azure Arc Service
 
@@ -294,7 +301,16 @@ Copy/download the script.
 
 In this section I'll be deploying the Arc agent onto the master node using the script that was copied/downloaded.
 
-### Step 8: Log into Azure
+- [Step 1: Log into Azure](#step-1-log-into-azure)
+- [Step 2: Set Azure subscription](#step-2-run-script)
+- [Step 3: Create connected cluster](#step-3-create-connected-cluster)
+- [Step 4: Run script](#step-4-run-script)
+- [Step 5: Deployment Verification](#step-5-deployment-verification)
+- [Step 6: Cluster overview](#step-6-cluster-overview)
+- [Step 7: Kubernetes clusters](#step-7-kubernetes-clusters)
+
+
+### Step 1: Log into Azure
 
 SSH to the master node (e.g. k3s-1) and execute the command in the script under **Log into Azure***. 
 
@@ -311,7 +327,7 @@ To sign in, use a web browser to open the page https://microsoft.com/devicelogin
 
 This will prompt you to perform a device login.
 
-### Step 9: Set Azure subscription
+### Step 2: Set Azure subscription
 
 Execute the command in the script under **Set Azure Subscription**. 
 
@@ -325,7 +341,7 @@ Example:
 k3s-admin@k3s-1:~$ az account set --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx
 ```
 
-### Step 10: Create connected cluster
+### Step 3 Create connected cluster
 
 To deploy and configure the Arc agent execute the command in the script under **Create connected cluster**.
 
@@ -389,24 +405,24 @@ Failed to validate if the active namespace exists on the kubernetes cluster. Exc
   "type": "microsoft.kubernetes/connectedclusters"
 }
 ```
-### Step 9: Run script
+### Step 4: Run script
 
 Switch back to the Azure Portal and select **Next: Verification >**.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-run-script.jpg)
 
-### Step 10: Verification
+### Step 5: Deployment Verification
 
 The Kubernetes cluster should show as successfully connected to Azure. Select **Go to the cluster**.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-validation.jpg)
 
-### Step 11: Cluster overview
+### Step 6: Cluster overview
 An overview of the cluster that was onboarded should be visible.
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-arc-cluster.jpg)
 
-### Step 12: Kubernetes clusters
+### Step 7: Kubernetes clusters
 
 Switching back to the **Azure Arc - Infrastructure** view, the new cluster is also visible from here.
 

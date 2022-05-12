@@ -6,18 +6,18 @@ categories: [Arc for Kubernetes]
 Out of the box, the monitoring of an Arc-enabled Kubernetes environment is limited. To get rich monitoring of the environment [Container Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-overview) needs to be configured, which I will be doing today. 
 
 This article contains the following sections: 
-1. [The Environment](#the-environment)
-2. [Prerequisites](#prerequisites)
-3. [Monitoring - Insights ](#monitoring---insights)
+- [The Environment](#the-environment)
+- [Prerequisites](#prerequisites)
+- [Monitoring - Insights ](#monitoring---insights)
 
 ## The Environment
 
 The environment that I will be working with is described below:
-1. [Hyper-V Host](#hyper-v-host)
-2. [Hyper-V Guests](#hyper-v-guests)
-3. [Kubernetes Environment](#kubernetes-environment)
-4. [Sample Voting Application](#sample-voting-application)
-5. [Arc-enabled Cluster](#arc-enabled-cluster)
+- [Hyper-V Host](#hyper-v-host)
+- [Hyper-V Guests](#hyper-v-guests)
+- [Kubernetes Environment](#kubernetes-environment)
+- [Sample Voting Application](#sample-voting-application)
+- [Arc-enabled Cluster](#arc-enabled-cluster)
 
 
 ### Hyper-V Host
