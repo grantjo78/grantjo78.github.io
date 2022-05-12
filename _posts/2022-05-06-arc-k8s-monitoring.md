@@ -188,9 +188,13 @@ Monitoring an Arc-enabled Kubernetes environment requires a Log Analytics Worksp
 
 ## Monitoring - Insights 
 
-Container insights is a feature to monitor the performance of container workloads deployed to Arc-enabled Kubernetes environments. Insights provides performance visibility by collecting memory and processor metrics from controllers, nodes, and containers that are available in Kubernetes through the Metrics API. Unfortunately this is not enabled by default.
+Container insights is a feature to monitor the performance of container workloads deployed to Arc-enabled Kubernetes environments. Insights provides performance visibility by collecting memory and processor metrics from controllers, nodes, and containers that are available in Kubernetes through the Metrics API. Unfortunately this is not enabled by default. I will walk through enabling Container insights with the following steps:
+- [Step 1: Overview](#step-1-overview)
+- [Step 2: Insights](#step-2-insights)
+- [Step 3: Configure Azure Monitor](#step-3-configure-azure-monitor)
+- [Step 4: Onboarding](#step-4-onboarding)
 
-### Step 1: Overview 
+### Step 1: Overview
 
 Under **Monitoring**, select **Insights**.
 

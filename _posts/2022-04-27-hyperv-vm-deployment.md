@@ -34,7 +34,15 @@ Below is an example of the [general purpose Dv5-series](https://docs.microsoft.c
 
 ## Hyper-V Host Virtual Machine Deployment
 
-I'll quickly running through the deployment of a virtual machine and highlight areas that you will need to consider.
+I'll quickly run through the deployment of a virtual machine and highlight areas that you will need to consider.
+- [Step 1: Basics](#step-1-basics)
+- [Step 2: Disks](#step-2-disks)
+- [Step 3: Networking](#step-3-networking)
+- [Step 4: Management](#step-4-management)
+- [Step 5: Advanced](#step-5-advanced)
+- [Step 6: Tags](#step-6-tags)
+- [Step 7: Review + Create](#step-7-review--create)
+- [Step 8: Resources](#step-8-resources)
 
 ### Step 1: Basics
 
