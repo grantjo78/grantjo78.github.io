@@ -263,7 +263,7 @@ Switch back to the Azure Portal and paste the token into the **Sign in** box.
 
 Select **Sign in**.
 
-### Step 6: Resources
+### Step 6: View Resources
 
 Once the sign in has completed, the resources from the cluster will be visible.
 
