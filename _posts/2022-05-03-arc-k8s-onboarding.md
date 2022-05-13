@@ -14,7 +14,7 @@ In this series I'm going to be exploring Azure Arc-enabled Kubernetes.
 
 *Part 4: GitOps - Coming Soon*
 
-This article will cover: 
+## Contents
 - [What is Azure Arc-enabled Kubernetes?](#what-is-azure-arc-enabled-kubernetes)
 - [The Demo Environment](#the-demo-environment)
 - [Prerequisites](#prerequisites)

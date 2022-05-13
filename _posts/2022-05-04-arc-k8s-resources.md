@@ -3,9 +3,9 @@ layout: post
 title: "Azure Arc-enabled Kubernetes - Part 2: Cluster Resources"
 categories: [Arc for Kubernetes]
 ---
-Today I will be exploring being able to view Kubernetes resources for an Arc-enabled cluster.
+Today I will be exploring viewing Kubernetes resources for an Arc-enabled cluster.
 
-This article contains the following sections: 
+## Contents
 - [The Demo Environment](#the-demo-environment)
 - [Viewing Kubernetes Resources](#viewing-kubernetes-resources)
 

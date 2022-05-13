@@ -3,9 +3,9 @@ layout: post
 title: "Azure Arc-enabled Kubernetes - Part 3: Monitoring"
 categories: [Arc for Kubernetes]
 ---
-Out of the box, the monitoring of an Arc-enabled Kubernetes environment is limited. To get rich monitoring of the environment [Container Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-overview) needs to be configured, which I will be doing today. 
+Out of the box, the monitoring of an Arc-enabled Kubernetes environment is limited. To get the rich monitoring of the environment,[Container Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-overview) needs to be configured.
 
-This article contains the following sections: 
+## Contents
 - [The Demo Environment](#the-demo-environment)
 - [Prerequisites](#prerequisites)
 - [Monitoring - Insights ](#monitoring---insights)
