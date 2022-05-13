@@ -6,7 +6,7 @@ categories: [Arc for Kubernetes]
 
 In this series I'll be exploring Azure Arc-enabled Kubernetes and I've broken my journey down into the following posts:
 
-[Part 1: Setting the Scene]()
+[Part 1: Setting the Scene]({% post_url 2022-05-03-arc-k8s-settingscene%})
 
 [Part 2: Onboarding a Kubernetes Cluster]({% post_url 2022-05-03-arc-k8s-onboarding%})
 
@@ -19,7 +19,7 @@ In this series I'll be exploring Azure Arc-enabled Kubernetes and I've broken my
 Before I dive into Arc-enabled Kubernetes I'll set the scene:
 - [What is Azure Arc-enabled Kubernetes?](#what-is-azure-arc-enabled-kubernetes)
 - [The Demo Environment](#the-demo-environment)
-- [Prerequisites for Arc-enabled Kubernetes](#prerequisites-for-arc-enabled-kubernetes))
+- [Prerequisites for Arc-enabled Kubernetes](#prerequisites-for-arc-enabled-kubernetes)
 
 
 ## What is Azure Arc-enabled Kubernetes?
