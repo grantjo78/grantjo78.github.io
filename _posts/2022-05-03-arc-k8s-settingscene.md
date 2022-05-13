@@ -4,7 +4,7 @@ title: "Azure Arc-enabled Kubernetes - Part 1: Setting the Scene"
 categories: [Arc for Kubernetes]
 ---
 
-In this series I'll be exploring Azure Arc-enabled Kubernetes and I've broken my journey down into the following posts:
+In this series I'll be exploring Azure Arc-enabled Kubernetes. 
 
 [Part 1: Setting the Scene]({% post_url 2022-05-03-arc-k8s-settingscene%})
 
