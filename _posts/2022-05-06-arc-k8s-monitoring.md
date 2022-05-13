@@ -9,6 +9,7 @@ Out of the box, the monitoring of an Arc-enabled Kubernetes environment is limit
 - [The Demo Environment](#the-demo-environment)
 - [Prerequisites](#prerequisites)
 - [Monitoring - Insights ](#monitoring---insights)
+- [What's Next](#whats-next)
 
 ## The Demo Environment
 

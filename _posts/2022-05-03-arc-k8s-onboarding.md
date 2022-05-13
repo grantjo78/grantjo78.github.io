@@ -20,7 +20,7 @@ In this series I'm going to be exploring Azure Arc-enabled Kubernetes.
 - [Prerequisites](#prerequisites)
 - [Arc-enabled Kubernetes - Azure Configuration](#arc-enabled-kubernetes---azure-configuration)
 - [Arc-enabled Kubernetes - Agent Deployment](#arc-enabled-kubernetes---agent-deployment)
-- [What's Next]
+- [What's Next](#whats-next)
 
 ## What is Azure Arc-enabled Kubernetes?
 

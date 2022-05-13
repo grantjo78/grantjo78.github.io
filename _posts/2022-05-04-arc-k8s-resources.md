@@ -8,6 +8,7 @@ Today I will be exploring viewing Kubernetes resources for an Arc-enabled cluste
 ## Contents
 - [The Demo Environment](#the-demo-environment)
 - [Viewing Kubernetes Resources](#viewing-kubernetes-resources)
+- [What's Next](#whats-next)
 
 ## The Demo Environment
 
