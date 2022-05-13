@@ -7,12 +7,6 @@ In [Part 2: Onboarding a Kubernetes Cluster]({% post_url 2022-05-03-arc-k8s-onbo
 - [Viewing Kubernetes Resources](#viewing-kubernetes-resources)
 - [What's Next](#whats-next)
 
-### Arc-enabled Cluster
-
-In [Part 1]({% post_url 2022-05-03-arc-k8s-onboarding%}) of this series I covered the onboarding of a Kubernetes cluster into Arc. This same cluster will be used in this article.
-
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-cluster-overview.jpg)
-
 ## Viewing Kubernetes Resources
 
 When you select one of the resources under **Kubernetes resources** (e.g. Namespaces) for the first time you will be prompted to enter a **Service account bearer token**. This token will be used by Arc to gain access to the cluster.
