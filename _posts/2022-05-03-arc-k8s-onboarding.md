@@ -19,6 +19,7 @@ To enable a Kubernetes cluster for Azure Arc, I'm going to walk through the step
 - [Step 5: Cluster details](#step-5-cluster-details)
 - [Step 6: Tags](#step-6-tags)
 - [Step 7: Run script](#step-7-run-script)
+
 ### Step 1: Azure Arc Service
 
 From the Azure Portal select the **Azure Arc** service.
@@ -103,7 +104,7 @@ Example:
 
 k3s-admin@k3s-1:~$ az account set --subscription xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx
 ```
-### Step 3 Create connected cluster
+### Step 3: Create connected cluster
 
 To deploy and configure the Arc agent execute the command in the script under **Create connected cluster**.
 

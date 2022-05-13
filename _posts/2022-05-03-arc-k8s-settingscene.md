@@ -21,7 +21,6 @@ Before I dive into Arc-enabled Kubernetes I'll set the scene:
 - [The Demo Environment](#the-demo-environment)
 - [Prerequisites for Arc-enabled Kubernetes](#prerequisites-for-arc-enabled-kubernetes)
 
-
 ## What is Azure Arc-enabled Kubernetes?
 
 [Azure Arc-enabled Kubernetes allows you to attach and configure Kubernetes clusters running anywhere. You can connect your clusters running on other public cloud providers (such as GCP or AWS) or clusters running on your on-premise data center (such as VMware vSphere or Azure Stack HCI) to Azure Arc.](https://docs.microsoft.com/en-us/azure/azure-arc/kubernetes/overview)
@@ -234,4 +233,4 @@ For the master node, the [Azure Cli](https://docs.microsoft.com/en-us/cli/azure/
 
 ## What's Next
 
-Now that have onboarded a Kubernetes cluster into Azure Arc we can move onto [Part 2: Onboarding a Kubernetes Cluster]({% post_url 2022-05-03-arc-k8s-onboarding%}.
+Now that have onboarded a Kubernetes cluster into Azure Arc we can move onto [Part 2: Onboarding a Kubernetes Cluster]({% post_url 2022-05-03-arc-k8s-onboarding%}).
