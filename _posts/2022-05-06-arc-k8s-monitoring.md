@@ -3,7 +3,7 @@ layout: post
 title: "Azure Arc-enabled Kubernetes - Part 4: Monitoring Cluster Performance"
 categories: [Arc for Kubernetes]
 ---
-In [Part 3: Viewing Cluster Resources]({% post_url 2022-05-04-arc-k8s-resources%}) I expolered viewing a clusters resources via Arc. In this post I'll dive into monitoring a clusters performance. Out of the box, the monitoring of an Arc-enabled Kubernetes environment is limited. To get the rich monitoring of the environment,[Container Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-overview) needs to be configured.
+In [Part 3: Viewing Cluster Resources]({% post_url 2022-05-04-arc-k8s-resources%}) I explored viewing a clusters resources via Arc. In this post I'll dive into monitoring a clusters performance. Out of the box, the monitoring of an Arc-enabled Kubernetes environment is limited. To get the rich monitoring of the environment,[Container Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-overview) needs to be configured.
 - [Prerequisites](#prerequisites)
 - [Monitoring - Insights ](#monitoring---insights)
 - [What's Next](#whats-next)
