@@ -20,6 +20,7 @@ In this series I'm going to be exploring Azure Arc-enabled Kubernetes.
 - [Prerequisites](#prerequisites)
 - [Arc-enabled Kubernetes - Azure Configuration](#arc-enabled-kubernetes---azure-configuration)
 - [Arc-enabled Kubernetes - Agent Deployment](#arc-enabled-kubernetes---agent-deployment)
+- [What's Next]
 
 ## What is Azure Arc-enabled Kubernetes?
 
@@ -409,4 +410,6 @@ Switching back to the **Azure Arc - Infrastructure** view, the new cluster is al
 
 ![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-onboard-newcluster.jpg)
 
+## What's Next
 
+Now that have onboarded a Kubernetes cluster into Azure Arc we can move onto [Part 2: Cluster Resources]({% post_url 2022-05-04-arc-k8s-resources%}).

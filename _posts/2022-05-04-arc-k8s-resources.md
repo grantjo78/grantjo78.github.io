@@ -321,3 +321,7 @@ Selecting **Secrets** will display all the secrets in the cluster.
 Filtering the view by the voting namespace will display the secrets that make up the voting application.
 
 ![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-config-secrets.jpg)
+
+## What's Next
+
+Now that have explored viewing the resources within an Arc-enabled Kubernetes cluster we can move onto [[Part 3: Monitoring]({% post_url 2022-05-06-arc-k8s-monitoring%}).
