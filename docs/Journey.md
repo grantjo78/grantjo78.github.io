@@ -6,11 +6,15 @@ order: 2
 
 ## Azure Arc-enabled - Kubernetes 
 
-[Part 1: Onboarding]({% post_url 2022-05-03-arc-k8s-onboarding%})
+[Part 1: Setting the Scene]({% post_url 2022-05-03-arc-k8s-settingscene%})
 
-[Part 2: Cluster Resources]({% post_url 2022-05-04-arc-k8s-resources%})
+[Part 2: Onboarding a Kubernetes Cluster]({% post_url 2022-05-03-arc-k8s-onboarding%})
 
-[Part 3: Monitoring]({% post_url 2022-05-06-arc-k8s-monitoring%})
+[Part 3: Viewing Cluster Resources]({% post_url 2022-05-04-arc-k8s-resources%})
+
+[Part 4: Monitoring Cluster Performance]({% post_url 2022-05-06-arc-k8s-monitoring%})
+
+*Part 5: GitOps - Coming Soon*
 
 ## Azure Arc-enabled - Servers 
 
