@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Azure Arc-enabled Kubernetes - Part 3: Viewing Cluster Resources]"
+title: "Azure Arc-enabled Kubernetes - Part 3: Viewing Cluster Resources"
 categories: [Arc for Kubernetes]
 ---
 In [Part 2: Onboarding a Kubernetes Cluster]({% post_url 2022-05-03-arc-k8s-onboarding%}) I onboarded a K3s cluster into Azure Arc. I'll now explore the clusters resources from Arc. 
