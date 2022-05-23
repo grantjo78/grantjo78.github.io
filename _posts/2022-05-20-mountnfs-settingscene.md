@@ -7,11 +7,11 @@ In this series I'll be exploring how to mount a Storage Account Blob container a
 
 [Part 1: Setting the Scene] ({% post_url 2022-05-20-mountnfs-settingscene})
 
-Part 2: Creating a NFS enabled Storage Account *Coming Soon*
+*Part 2: Creating a NFS enabled Storage Account - Coming Soon*
 
-Part 3: Creating a NFS enabled Container *Coming Soon* 
+*Part 3: Creating a NFS enabled Container - Coming Soon* 
 
-Part 4: Mounting a Container as a NFS Volume *Coming Soon*
+*Part 4: Mounting a Container as a NFS Volume - Coming Soon*
 
 ## What is Network File System (NFS) 3.0 protocol support for Azure Blob Storage?
 
