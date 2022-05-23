@@ -4,7 +4,7 @@ title: "The Journey"
 order: 2
 ---
 
-# Mounting a Blob Container via NFS
+## Mounting a Blob Container via NFS
 
 [Part 1: Setting the Scene]({% post_url 2022-05-20-mountnfs-settingscene})
 
