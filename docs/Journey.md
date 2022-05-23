@@ -6,7 +6,7 @@ order: 2
 
 # Mounting a Blob Container via NFS
 
-Part 1: Setting the Scene ({% post_url 2022-05-20-mountnfs-settingscene})
+[Part 1: Setting the Scene]({% post_url 2022-05-20-mountnfs-settingscene})
 
 ## Azure Arc-enabled - Kubernetes 
 
