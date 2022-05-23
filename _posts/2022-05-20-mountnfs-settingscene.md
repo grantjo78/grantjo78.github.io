@@ -5,7 +5,7 @@ categories: [Storage Accounts, NFS]
 ---
 In this series I'll be exploring how to mount a Storage Account Blob container as an NFS volume within a Linux virtual machine.
 
-[Part 1: Setting the Scene]({% post_url 2022-05-20-mountnfs-settingscene})
+[Part 1: Setting the Scene]({% post_url 2022-05-20-mountnfs-settingscene%})
 
 *Part 2: Creating a NFS enabled Storage Account - Coming Soon*
 
