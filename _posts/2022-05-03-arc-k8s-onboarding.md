@@ -24,23 +24,23 @@ To enable a Kubernetes cluster for Azure Arc, I'm going to walk through the step
 
 From the Azure Portal select the **Azure Arc** service.
 
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-service.jpg)
+![](/docs/assets/images/arc-k8s/onboarding/arc-service.jpg)
 
 ### Step 2: Azure Arc Overview
 
 Under the **Infrastructure** section, select **Kubernetes clusters**.
 
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-overview.jpg)
+![](/docs/assets/images/arc-k8s/onboarding/arc-overview.jpg)
 ### Step 3: Kubernetes clusters
 
 Select **Add a Kubernetes cluster with Azure Arc**.
 
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-add-cluster.jpg)
+![](/docs/assets/images/arc-k8s/onboarding/arc-k8s-add-cluster.jpg)
 ### Step 4: Prerequisites
 
 Select **Next: Cluster details > **
 
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-prerequisites.jpg)
+![](/docs/assets/images/arc-k8s/onboarding/arc-k8s-prerequisites.jpg)
 ### Step 5: Cluster details
 
 Populate the below fields. 
@@ -52,17 +52,17 @@ Populate the below fields.
 
  Select **Next: Tags**.
 
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-cluster-details.jpg)
+![](/docs/assets/images/arc-k8s/onboarding/arc-k8s-cluster-details.jpg)
 ### Step 6: Tags
 
 Populate the fields with data that will be useful and select **Next: Run script**
 
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-tags.jpg)
+![](/docs/assets/images/arc-k8s/onboarding/arc-k8s-tags.jpg)
 ### Step 7: Run script
 
 Copy/download the script.
 
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-arc-run-script-stop.jpg)
+![](/docs/assets/images/arc-k8s/onboarding/arc-k8s-arc-run-script-stop.jpg)
 ## Arc-enabled Kubernetes - Agent Deployment
 
 In this section I'll be deploying the Arc agent onto the master node using the script that was copied/downloaded.
@@ -172,22 +172,22 @@ Failed to validate if the active namespace exists on the kubernetes cluster. Exc
 
 Switch back to the Azure Portal and select **Next: Verification >**.
 
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-run-script.jpg)
+![](/docs/assets/images/arc-k8s/onboarding/arc-k8s-run-script.jpg)
 ### Step 5: Deployment Verification
 
 The Kubernetes cluster should show as successfully connected to Azure. Select **Go to the cluster**.
 
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-validation.jpg)
+![](/docs/assets/images/arc-k8s/onboarding/arc-k8s-validation.jpg)
 ### Step 6: Cluster overview
 
 An overview of the cluster that was onboarded should be visible.
 
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-arc-cluster.jpg)
+![](/docs/assets/images/arc-k8s/onboarding/arc-k8s-arc-cluster.jpg)
 ### Step 7: Kubernetes clusters
 
 Switching back to the **Azure Arc - Infrastructure** view, the new cluster is also visible from here.
 
-![](/docs/assets/images/2022-05-03-arc-k8s-onboarding/arc-k8s-onboard-newcluster.jpg)
+![](/docs/assets/images/arc-k8s/onboarding/arc-k8s-onboard-newcluster.jpg)
 
 ## What's Next
 

@@ -37,14 +37,14 @@ The environment that I'll be utilising for my Arc-enabled Kubernetes journey is 
 
 To simulate a server that is outside of Azure, I'm going to leverage nested virtualisation within an Azure virtual machine by enabling the Hyper-V role. If you would like to know how I did this, you can review my previous post [Nested Virtualization on Azure]({% post_url 2022-04-27-hyperv-vm-deployment%}).
 
-![](/docs/assets/images/2022-05-03-arc-k8s-settingscene/arc-hyperv-host.jpg)
+![](/docs/assets/images/arc-k8s/settingscene/arc-hyperv-host.jpg)
 ### Hyper-V Guests
 
 Within the Hyper-V host, I've deployed two virtual machines:
 - k3s-1
 - k3s-2
 
-![](/docs/assets/images/2022-05-03-arc-k8s-settingscene/arc-hyperv-guest-k3s.jpg)
+![](/docs/assets/images/arc-k8s/settingscene/arc-hyperv-guest-k3s.jpg)
 
 Both virtual machines are running Ubuntu 20.04.4 LTS.
 
@@ -83,7 +83,7 @@ k3s-2   Ready    <none>                 22h   v1.22.7+k3s1
 
 I've deployed the below sample appliaction into the **voting** namespace.
 
-![](/docs/assets/images/2022-05-03-arc-k8s-settingscene/arc-k8s-votingapp.jpg)
+![](/docs/assets/images/arc-k8s/settingscene/arc-k8s-votingapp.jpg)
 
 Below is the [sample yaml code](https://docs.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-cli#deploy-the-application) for the application (with some slight modifications for K3s)
 
