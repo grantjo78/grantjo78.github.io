@@ -113,6 +113,11 @@ Once the deployment has completed successfully select **Go to resource**.
 
 Now that we have a NFS enabled storage account, we need to create a container that can be mounted from the virtual machine.
 
+- [Step 1: Navigate to Containers](#step-1-navigate-to-containers)
+- [Step 2: Add Container](#step-2-add-container)
+- [Step 3: Create Container](#step-3-create-container)
+- [Step 4: View Container](#step-4-view-container)
+
 ### Step 1: Navigate to Containers
 
 Under **Data storage** select **Containers**.
