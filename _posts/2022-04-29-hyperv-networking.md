@@ -8,19 +8,19 @@ Since my last post in this series, I've deployed a virtual machine (VM1) onto th
 
 VM1's has been allocated to the virtual switch that was created during the enabling of the Hyper-V role (Microsoft Hyper-V Network Adapter - Virtual Switch).
 
-![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-vSwitch-Original.jpg)
+![](/docs/assets/images/hyperv/networking/Hyperv-Guest-vSwitch-Original.jpg)
 
  *"Microsoft Hyper-V Network Adapter - Virtual Switch"* configuration indicates that it has been configured as an [external virtual switch](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/plan-hyper-v-networking-in-windows-server#switch-and-network-adapter-choices). This configuration does not allow for my guest virtual machine to egress traffic outside of the Hyper-V host. 
 
-![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-vSwitch-Original.jpg)
+![](/docs/assets/images/hyperv/networking/Hyperv-Networking-vSwitch-Original.jpg)
 
 Looking at the guest virtual machine's IP configuration, you can see that it did not receive an IP address via DHCP and there is no default gateway.
 
-![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Networking-Guest-IP.jpg)
+![](/docs/assets/images/hyperv/networking/Hyperv-Networking-Guest-IP.jpg)
 
 If I try to access a website on the internet (e.g. www.microsoft.com) it does not succeed.
 
-![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-NoInternetAccess.jpg)
+![](/docs/assets/images/hyperv/networking/Hyperv-Guest-NoInternetAccess.jpg)
 
 In order to allow the guest virtual machine to route traffic externally we need to create a **NAT Virtual Network**. 
 
@@ -181,11 +181,11 @@ Now that we have a NAT gateway bound to a virtual switch, we need to configure t
 
 If you go to the virtual machines Hyper-V settings and click on **Network Adapters**, you can see that the guest is attached to the original virtual switch.
 
-![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-vSwitch-Original.jpg)
+![](/docs/assets/images/hyperv/networking/Hyperv-Guest-vSwitch-Original.jpg)
 
 Click on the pull down and select the new virtual switch (e.g. Azure)
 
-![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-vSwitch-Azure.jpg)
+![](/docs/assets/images/hyperv/networking/Hyperv-Guest-vSwitch-Azure.jpg)
 
 ### Step 6: Guest Machine IP Address
 
@@ -199,8 +199,8 @@ Configure the guest networking interface with the following:
 - **Default gateway**: This should match the NAT Gateway IP address (e.g. 192.168.0.1)
 - **DNS Server**: IP address of a DNS server that is able to perform name resolution (e.g. 8.8.8.8) 
 
-![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-IP.jpg)
+![](/docs/assets/images/hyperv/networking/Hyperv-Guest-IP.jpg)
 
 Once the above configurations have been made, the guest virtual machine should now be able to access the internet.
 
-![](/docs/assets/images/2022-04-29-hyperv-networking/Hyperv-Guest-InternetAccess.jpg)
+![](/docs/assets/images/hyperv/networking/Hyperv-Guest-InternetAccess.jpg)
