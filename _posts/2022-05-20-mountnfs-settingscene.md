@@ -36,7 +36,7 @@ The network will consist of:
 
 ![](/docs/assets/images/2022-05-20-mountnfs-settingscene/mountnfs-environment-vnet.jpg)
 
-- Service Endpoints enabled for Azure Storage on the ApplicationSubnet
+- Service Endpoints enabled for Microsoft Storage on the ApplicationSubnet
 
 ![](/docs/assets/images/2022-05-20-mountnfs-settingscene/mountnfs-environment-applicationsubnet.jpg)
 
