@@ -27,7 +27,7 @@ To secure the Storage Account for NFS access, review the [Network Security Recom
 
 The environment that I will be working with will be pretty simple.
 
-![](/docs/assets/images/2022-05-20-storageaccount-nfs/mountnfs-environment.jpeg)
+![](/docs/assets/images/2022-05-20-mountnfs-settingscene/mountnfs-environment.jpeg)
 
 ### Network
 
