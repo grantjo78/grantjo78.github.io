@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Part 2: Creating a NFS enabled Storage Account"
+title: "Mounting a Blob Container via NFS - Part 2: Creating a NFS enabled Storage Account"
 categories: [Storage Accounts, NFS]
 ---
 
