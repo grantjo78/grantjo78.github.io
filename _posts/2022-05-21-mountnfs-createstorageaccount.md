@@ -5,12 +5,13 @@ categories: [Storage Accounts, NFS]
 ---
 
 In this artcile I'll be creating a NFS enabled Storage Account. 
-- [Create NFS Enabled Storage Account](#create-nfs-enabled-storage-account)
+- [Create a NFS Enabled Storage Account](#create-nfs-enabled-storage-account)
+- *Create a Container - Coming Soon*
 - [What's Next](#whats-next)
 
 *At the time of writing this artcile, [NFS can't be enabled on existing storage accounts](https://docs.microsoft.com/en-us/azure/storage/blobs/network-file-system-protocol-known-issues#nfs-30-support)*
 
-## Create NFS Enabled Storage Account
+## Create a NFS Enabled Storage Account
 
 I'm going to walk through the steps to create a NFS enabled Storage Account via the Azure Portal:
 - [Step 1: Azure Portal](#step-1-azure-portal)
