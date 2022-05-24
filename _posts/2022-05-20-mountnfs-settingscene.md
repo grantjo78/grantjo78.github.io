@@ -25,24 +25,24 @@ To secure the Storage Account for NFS access, review the [Network Security Recom
 
 The environment that I will be working with is simple.
 
-![](/docs/assets/images/2022-05-20-mountnfs-settingscene/mountnfs-environment.jpeg)
+![](/docs/assets/images/mountnfs/settingscene/mountnfs-environment.jpeg)
 
 ### Network
 
 The network will consist of:
 - A single virtual network with a subnet (ApplicationSubnet) for my virtual machine.
 
-![](/docs/assets/images/2022-05-20-mountnfs-settingscene/mountnfs-environment-vnet.jpg)
+![](/docs/assets/images/mountnfs/settingscene/mountnfs-environment-vnet.jpg)
 
 - Service Endpoints enabled for Microsoft Storage on the ApplicationSubnet.
 
-![](/docs/assets/images/2022-05-20-mountnfs-settingscene/mountnfs-environment-applicationsubnet.jpg)
+![](/docs/assets/images/mountnfs/settingscene/mountnfs-environment-applicationsubnet.jpg)
 
 ### Virtual Machine
 
 - A single Linux virtual machine deployed into the ApplicationSubnet. This virtual machine will be used to mount a Blob container via the NFS 3.0 protocol.
 
- ![](/docs/assets/images/2022-05-20-mountnfs-settingscene/mountnfs-environment-azurevm.jpg)
+ ![](/docs/assets/images/mountnfs/settingscene/mountnfs-environment-azurevm.jpg)
 
 ### Storage Account
 
