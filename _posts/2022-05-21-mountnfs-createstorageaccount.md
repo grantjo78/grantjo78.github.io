@@ -6,7 +6,7 @@ categories: [Storage Accounts, NFS]
 
 In this artcile I'll be creating a NFS enabled Storage Account. 
 - [Create a NFS Enabled Storage Account](#create-nfs-enabled-storage-account)
-- *Create a Container - Coming Soon*
+- *Create a Blob Container - Coming Soon*
 - [What's Next](#whats-next)
 
 *At the time of writing this artcile, [NFS can't be enabled on existing storage accounts](https://docs.microsoft.com/en-us/azure/storage/blobs/network-file-system-protocol-known-issues#nfs-30-support)*
@@ -113,6 +113,16 @@ Once the deployment has completed successfully select **Go to resource**.
 You can now view the storage account that has been created.
 
 ![](/docs/assets/images/2022-05-20-mountnfs-createstorageaccount/mountnfs-storageaccount-overview.jpg)
+
+## Create a Blob Container
+
+![](/docs/assets/images/2022-05-20-mountnfs-createstorageaccount/mountnfs-container-overview.jpg)
+
+![](/docs/assets/images/2022-05-20-mountnfs-createstorageaccount/mountnfs-container-containers.jpg)
+
+![](/docs/assets/images/2022-05-20-mountnfs-createstorageaccount/mountnfs-container-add.jpg)
+
+![](/docs/assets/images/2022-05-20-mountnfs-createstorageaccount/mountnfs-container-complete.jpg)
 
 ## What's Next
 
