@@ -64,7 +64,7 @@ Under **Add a single server** select **Generate script**.
 
 Select **Next**.
 
-![](/docs/assets/images/2022-04-29-arc-servers/arc-servers-single-prerequisites.jpg)
+![](/docs/assets/images/arc-servers/onboarding/arc-servers-single-prerequisites.jpg)
 
 ### Step 5: Resource Details
 
@@ -76,19 +76,19 @@ Populate the fields and select **Next**.
 - **Operating system**: The operating system of the server.
 - **Connectivity method**: How the Azure Connected Machine agent should connect to the internet.
 
-![](/docs/assets/images/2022-04-29-arc-servers/arc-servers-single-resourcedetails.jpg)
+![](/docs/assets/images/arc-servers/onboarding/arc-servers-single-resourcedetails.jpg)
 
 ### Step 6: Tags
 
 Populate the fields with data that will be useful and select **Next**
 
-![](/docs/assets/images/2022-04-29-arc-servers/arc-servers-single-tags.jpg)
+![](/docs/assets/images/arc-servers/onboarding/arc-servers-single-tags.jpg)
 
 ### Step 7:
 
 Copy or download the script. This will be used to deploy and configure the Arc agent on the target server.
 
-![](/docs/assets/images/2022-04-29-arc-servers/arc-servers-single-downloadscript.jpg)
+![](/docs/assets/images/arc-servers/onboarding/arc-servers-single-downloadscript.jpg)
 
 ## Arc-enabled Servers - Agent Deployment
 
@@ -134,5 +134,5 @@ time="xxxx-xx-xxxxx:xx:xx-xx:xx" level=info msg="Successfully Onboarded Resource
 
 Switching back to the Azure Portal, the server that had the Arc agent installed onto should now appear within the Azure Arc Servers blade.
 
-![](/docs/assets/images/2022-04-29-arc-servers/arc-vm-onboarded.jpg)
+![](/docs/assets/images/arc-servers/onboarding/arc-vm-onboarded.jpg)
 
