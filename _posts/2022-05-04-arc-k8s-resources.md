@@ -11,7 +11,7 @@ In [Part 2: Onboarding a Kubernetes Cluster]({% post_url 2022-05-03-arc-k8s-onbo
 
 When you select one of the resources under **Kubernetes resources** (e.g. Namespaces) for the first time you will be prompted to enter a **Service account bearer token**. This token will be used by Arc to gain access to the cluster.
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-namespace-signin.jpg)
+![](/docs/assets/images/arc-k8s/resources/arc-k8s-resources-namespace-signin.jpg)
 
 The following steps will walk through the process of creatating a token for Arc to utilise, providing visibility to the clusters resources:
 - [Step 1: Create Service Account](#step-1-create-service-account)
@@ -79,7 +79,7 @@ Example:
 k3s-admin@k3s-1:~$ TOKEN=$(kubectl get secret ${SECRET_NAME} -o jsonpath='{$.data.token}' | base64 -d | sed $'s/$/\\\n/g')
 k3s-admin@k3s-1:~$ echo $TOKEN
 ```
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-token.jpg)
+![](/docs/assets/images/arc-k8s/resources/arc-k8s-resources-token.jpg)
 
 Copy the token.
 
@@ -87,7 +87,7 @@ Copy the token.
 
 Switch back to the Azure Portal and paste the token into the **Sign in** box.
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resources-token-paste.jpg)
+![](/docs/assets/images/arc-k8s/resources/arc-k8s-resources-token-paste.jpg)
 
 Select **Sign in**.
 
@@ -99,7 +99,7 @@ Once the sign in has completed, the resources from the cluster will be visible.
 
 All the namespaces that exist within the cluster will be visible. The [sample application](#sample-voting-application) namespace, **voting**, is highlighted.
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-namespace-voting.jpg)
+![](/docs/assets/images/arc-k8s/resources/arc-k8s-resource-namespace-voting.jpg)
 
 #### Workloads
 
@@ -109,19 +109,19 @@ Selecting **Workloads** will bring up all the **Deployments** within the cluster
 
 Filtering the view by the voting namespace will display the deploymets for the voting applications. 
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-deployments-voting.jpg)
+![](/docs/assets/images/arc-k8s/resources/arc-k8s-resource-deployments-voting.jpg)
 
 ##### Pods
 
 Selecting **Pods** will display all the pods in the cluster. Filtering the view by the voting namespace will display the pods that make up the voting application.
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-pods-voting.jpg)
+![](/docs/assets/images/arc-k8s/resources/arc-k8s-resource-pods-voting.jpg)
 
 ##### Replica Sets
 
 Selecting **Replica sets** will display all the replica sets in the cluster. Filtering the view by the voting namespace will display the replica sets that make up the voting application.
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-replicasets-voting.jpg)
+![](/docs/assets/images/arc-k8s/resources/arc-k8s-resource-replicasets-voting.jpg)
 
 
 #### Service and ingresses
@@ -130,7 +130,7 @@ Selecting the **Services and ingresses** resource will display all services in t
 
 Filtering the view by the voting namespace will display the services that make up the voting application.
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-service-voting.jpg)
+![](/docs/assets/images/arc-k8s/resources/arc-k8s-resource-service-voting.jpg)
 
 #### Configuration
 
@@ -140,7 +140,7 @@ Selecting the **Configuration** resource will display all the config maps in the
 
 Filtering the view by the voting namespace will display the config maps that make up the voting application.
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-config-configmaps.jpg)
+![](/docs/assets/images/arc-k8s/resources/arc-k8s-resource-config-configmaps.jpg)
 
 ##### Secrets
 
@@ -148,7 +148,7 @@ Selecting **Secrets** will display all the secrets in the cluster.
 
 Filtering the view by the voting namespace will display the secrets that make up the voting application.
 
-![](/docs/assets/images/2022-05-04-arc-k8s-resources/arc-k8s-resource-config-secrets.jpg)
+![](/docs/assets/images/arc-k8s/resources/arc-k8s-resource-config-secrets.jpg)
 
 ## What's Next
 

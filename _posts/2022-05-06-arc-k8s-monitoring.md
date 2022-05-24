@@ -28,28 +28,28 @@ Container insights is a feature to monitor the performance of container workload
 
 Under **Monitoring**, select **Insights**.
 
-![](/docs/assets/images/2022-05-06-arc-k8s-monitoring/arc-k8s-monitoring-overview.jpg)
+![](/docs/assets/images/arc-k8s/monitoring/arc-k8s-monitoring-overview.jpg)
 
 ### Step 2: Insights
 
 Insights needs to be configured. Select **Configure azure monitor**.
 
-![](/docs/assets/images/2022-05-06-arc-k8s-monitoring/arc-k8s-monitoring-configuration.jpg)
+![](/docs/assets/images/arc-k8s/monitoring/arc-k8s-monitoring-configuration.jpg)
 
 ### Step 3: Configure Azure Monitor
 
 Select the **Log Analytics Workspace** that was created as part of the [Prerequisites](#prerequisites) and select **Configure**.
 
-![](/docs/assets/images/2022-05-06-arc-k8s-monitoring/arc-k8s-monitoring-law.jpg)
+![](/docs/assets/images/arc-k8s/monitoring/arc-k8s-monitoring-law.jpg)
 
 ### Step 4: Onboarding
 
 Insights will now be configured for the environment.
 
-![](/docs/assets/images/2022-05-06-arc-k8s-monitoring/arc-k8s-monitoring-onboarding.jpg)
+![](/docs/assets/images/arc-k8s/monitoring/arc-k8s-monitoring-onboarding.jpg)
 
 Once the onboarding has completed, performance information on the environment will be visible. 
 
-![](/docs/assets/images/2022-05-06-arc-k8s-monitoring/arc-k8s-monitoring-insights-reporting.jpg)
+![](/docs/assets/images/arc-k8s/monitoring/arc-k8s-monitoring-insights-reporting.jpg)
 
 ## What's Next
