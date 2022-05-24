@@ -7,7 +7,7 @@ In this series I'll be exploring how to mount a Storage Account Blob container a
 
 [Part 1: Setting the Scene]({% post_url 2022-05-20-mountnfs-settingscene%})
 
-[Part 2: Creating a NFS enabled Storage Account]({% post_url 2022-05-20-mountnfs-createstorageaccount%})
+[Part 2: Creating a NFS enabled Storage Account]({% post_url 2022-05-21-mountnfs-createstorageaccount%})
 
 *Part 3: Mounting a Container as a NFS Volume - Coming Soon*
 
