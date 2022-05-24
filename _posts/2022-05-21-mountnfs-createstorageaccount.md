@@ -4,12 +4,12 @@ title: "Mounting a Blob Container via NFS - Part 2: Creating a NFS enabled Stora
 categories: [Storage Accounts, NFS]
 ---
 
-In this artcile I'll be creating a NFS enabled Storage Account. 
+In this article I'll be creating a NFS enabled Storage Account. 
 - [Create a NFS Enabled Storage Account](#create-nfs-enabled-storage-account)
-- *Create a Blob Container - Coming Soon*
+- [Create a Blob Container](#create-a-blob-container)
 - [What's Next](#whats-next)
 
-*At the time of writing this artcile, [NFS can't be enabled on existing storage accounts](https://docs.microsoft.com/en-us/azure/storage/blobs/network-file-system-protocol-known-issues#nfs-30-support)*
+*At the time of writing this article, [NFS can't be enabled on existing storage accounts](https://docs.microsoft.com/en-us/azure/storage/blobs/network-file-system-protocol-known-issues#nfs-30-support)*
 
 ## Create a NFS Enabled Storage Account
 
@@ -21,14 +21,13 @@ I'm going to walk through the steps to create a NFS enabled Storage Account via 
 - [Step 5: Configure Network Settings](#step-5-configure-network-settings)
 - [Step 6: Configure Encryption Settings](#step-6-configure-data-protection-settings)
 - [Step 7: Configure Encryption Settings](#step-7-configure-encryption-settings)
-- [Step 8: Configure Tags Settingst](#step-8-configure-tags-settings)
+- [Step 8: Configure Tags Settings](#step-8-configure-tags-settings)
 - [Step 9: Create Storage Account](#step-9-create-storage-account)
 - [Step 10: Monitor Deployment](#step-10-monitor-deployment)
-- [Step 11: Storage Account Overview](#step-11-storage-account-overview)
 
 ### Step 1: Azure Portal
 
-From the Azure Portal home screen screen select **Create a resource**
+From the Azure Portal home screen select **Create a resource**
 
 ![](/docs/assets/images/2022-05-20-mountnfs-createstorageaccount/mountnfs-storageaccount-home.jpg)
 
@@ -53,7 +52,7 @@ Populate the fields and select **Next: Advanced >**.
 
 ### Step 4: Configure Advanced Settings
 
-To enable NFS on a storage account first select **Enable hierarchial namespace** and then **Enable network file system v3***.
+To enable NFS on a storage account first select **Enable hierarchical namespace** and then **Enable network file system v3***.
 
 Select **Next: Networking >** 
 
@@ -66,7 +65,7 @@ As I'm going to use a Service Endpoint to connect to the storage account, select
 Populate the following fields:
 
 - **Virtual network subscription**: The subscription where the virtual network exists.
-- **Virtual network**: The virtual network that contains the subnet that will have the enabled Service EnndPoint.
+- **Virtual network**: The virtual network that contains the subnet that will have the enabled Service EndPoint.
 - **Subnet**: The subnet with the Service Endpoint enabled on.
 
 Select **Next: Data Protection >**
@@ -75,7 +74,7 @@ Select **Next: Data Protection >**
 
 ### Step 6: Configure Data Protection Settings
 
-No changes need to be here at this point in time.
+No changes need to be made here at this point in time.
 
 Select **Next: Encryption >**
 
@@ -83,14 +82,14 @@ Select **Next: Encryption >**
 
 ### Step 7: Configure Encryption Settings
 
-No changes need to be here at this point in time.
+No changes need to be made here at this point in time.
 
 Select **Next: Tags >**
 
 ![](/docs/assets/images/2022-05-20-mountnfs-createstorageaccount/mountnfs-storageaccount-encryption.jpg)
 
 ### Step 8: Configure Tags Settings
-No changes need to be here at this point in time.
+No changes need to be made here at this point in time.
 
 Select **Next: Review + Create >**
 
@@ -108,22 +107,39 @@ Once the deployment has completed successfully select **Go to resource**.
 
 ![](/docs/assets/images/2022-05-20-mountnfs-createstorageaccount/mountnfs-storageaccount-deployment.jpg)
 
-### Step 11: Storage Account Overview
-
-You can now view the storage account that has been created.
-
 ![](/docs/assets/images/2022-05-20-mountnfs-createstorageaccount/mountnfs-storageaccount-overview.jpg)
 
 ## Create a Blob Container
 
+Now that we have a NFS enabled storage account, we need to create a container that can be mounted from the virtual machine.
+
+### Step 1: Navigate to Containers
+
+Under **Data storage** select **Containers**.
+
 ![](/docs/assets/images/2022-05-20-mountnfs-createstorageaccount/mountnfs-container-overview.jpg)
+
+### Step 2: Add Container
+
+Select **+ Container**
 
 ![](/docs/assets/images/2022-05-20-mountnfs-createstorageaccount/mountnfs-container-containers.jpg)
 
+### Step 3: Create Container
+
+Populate the following fields:
+
+- **Name**: Name of the container to be created. 
+- **Root Squash**: Select the value configuration relevant to your operating system.
+
 ![](/docs/assets/images/2022-05-20-mountnfs-createstorageaccount/mountnfs-container-add.jpg)
+
+### Step 4: View Container
+
+You can now view the container that will be mounted onto the virtual machine.
 
 ![](/docs/assets/images/2022-05-20-mountnfs-createstorageaccount/mountnfs-container-complete.jpg)
 
 ## What's Next
 
-Now that we have a NFS enabled storage account, the next step is to create a container.
+Now that we have a NFS enabled storage account and a container, the next step is to mount this onto a virtual machine.
