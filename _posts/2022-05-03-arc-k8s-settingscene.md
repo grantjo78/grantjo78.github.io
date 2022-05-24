@@ -233,4 +233,4 @@ For the master node, the [Azure Cli](https://docs.microsoft.com/en-us/cli/azure/
 
 ## What's Next
 
-Now that have onboarded a Kubernetes cluster into Azure Arc we can move onto [Part 2: Onboarding a Kubernetes Cluster]({% post_url 2022-05-03-arc-k8s-onboarding%}).
+We can move onto [Part 2: Onboarding a Kubernetes Cluster]({% post_url 2022-05-03-arc-k8s-onboarding%}).
