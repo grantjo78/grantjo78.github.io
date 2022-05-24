@@ -4,9 +4,11 @@ title: "Part 2: Creating a NFS enabled Storage Account"
 categories: [Storage Accounts, NFS]
 ---
 
-In this post I'll be creating a NFS enabled Storage Account.  the Kubernetes Cluster from my demo environment into Azure Arc. This post will cover the following sections:
-- [Create NFS Enabled Storage Account](#create-nfs-enabled-storage-account
+In this artcile I'll be creating a NFS enabled Storage Account. 
+- [Create NFS Enabled Storage Account](#create-nfs-enabled-storage-account)
 - [What's Next](#whats-next)
+
+*At the time of writing this artcile, [NFS can't be enabled on existing storage accounts](https://docs.microsoft.com/en-us/azure/storage/blobs/network-file-system-protocol-known-issues#nfs-30-support)*
 
 ## Create NFS Enabled Storage Account
 
