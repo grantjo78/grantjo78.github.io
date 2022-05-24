@@ -46,7 +46,7 @@ The network will consist of:
 
  ![](/docs/assets/images/2022-05-20-mountnfs-settingscene/mountnfs-environment-azurevm.jpg)
 
- ### Storage Account
+### Storage Account
 
 - A single NFS enabled Storage Account (I'll be creating this in the next post). This Storage Account will be used by the virtual machine to mount the NFS container.
 
