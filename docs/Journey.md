@@ -8,7 +8,7 @@ order: 2
 
 [Part 1: Setting the Scene]({% post_url 2022-05-20-mountnfs-settingscene%})
 
-*Part 2: Creating a NFS enabled Storage Account - Coming Soon*
+[Part 2: Creating a NFS enabled Storage Account]({% post_url 2022-05-20-mountnfs-createstorageaccount%})
 
 *Part 3: Creating a NFS enabled Container - Coming Soon* 
 
