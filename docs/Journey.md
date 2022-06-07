@@ -8,7 +8,7 @@ order: 2
 
 ### Azure Kubernetes Service
 
-Azure RBAC with Azure AD integration not working
+[Azure RBAC with Azure AD integration not working]({% post_url  2022-06-07-aks-rbac%})
 
 ## Mounting a Blob Container via NFS
 
