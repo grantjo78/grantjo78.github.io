@@ -5,7 +5,6 @@ order: 2
 ---
 
 ## Lessons Learnt
-
 ### Azure Kubernetes Service
 
 [Azure RBAC with Azure AD integration not working]({% post_url  2022-06-07-aks-rbac%})
